@@ -39,7 +39,8 @@
       </div>
     <% else %>
       <!-- Login link (when logged out) -->
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= render "devise/shared/modal" %>
+      <%= link_to t(".sign_in", default: "Login"), "#", class: "navbar-wagon-item navbar-wagon-link", data: {toggle: "modal", target: "#login-modal"} %>
     <% end %>
   </div>
 
