@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-  resources :arts
-  resources :supporters
+  resources :users, only: [:show]
+  resources :arts, except: [:destroy] do
+    collection do
+      get 'search'
+    end
+    resources :supporters, only: [:create, :destroy]
+  end
 end
