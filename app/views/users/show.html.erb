@@ -1,2 +1,46 @@
 <h1>Profile page</h1>
-<h3><%= current_user.alias %></h3>
+
+<% if @user.avatar %>
+  <div class="avatar" style="background-image: url(<%= @user.avatar %>);">
+    <% if @user.type == "StreetArtist" %>
+      <div class="street-artist-badge">A</div>
+    <% end %>
+  </div>
+<% end %>
+
+<h3><%= @user.alias %></h3>
+
+<!-- <h4> Amount of Hearts </h4> -->
+<!-- <h4> Amount of Uploads </h4> -->
+
+
+
+<ul class="nav nav-tabs" role="tablist">
+  <li role="presentation" class="active"><a href="#about-me" aria-controls="about-me" role="tab" data-toggle="tab">About Me</a></li>
+  <li role="presentation"><a href="#my-street-art" aria-controls="my-street-art" role="tab" data-toggle="tab">My Street Art</a></li>
+  <li role="presentation"><a href="#hearted-art" aria-controls="hearted-art" role="tab" data-toggle="tab">Hearted Art</a></li>
+  <li role="presentation"><a href="#uploaded-art" aria-controls="uploaded-art" role="tab" data-toggle="tab">Uploaded Art</a></li>
+</ul>
+
+<div class="tab-content">
+  <div role="tabpanel" class="tab-pane active" id="about-me">
+  <!-- Tab 1: About me -->
+    <% if @user.info %>
+      <p><%= @user.info %></p>
+    <% end %>
+  </div>
+  <% if @user.type == "StreetArtist" %>
+    <div role="tabpanel" class="tab-pane" id="my-street-art">
+      <!-- Tab 2: My Street Art (if street artist) -->
+      <p>placeholder my street art</p>
+    </div>
+    <% end %>
+  <div role="tabpanel" class="tab-pane" id="hearted-art">
+    <!-- Tab 3: Hearted Art -->
+    <p>placeholder hearted art</p>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="uploaded-art">
+    <!-- Tab 4: Uploaded Art -->
+    <p>placeholder uploaded art</p>
+  </div>
+</div>
