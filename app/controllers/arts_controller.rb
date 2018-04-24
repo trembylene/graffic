@@ -36,6 +36,14 @@ class ArtsController < ApplicationController
 
   def update
     authorize @art
+    @art.update(art_params)
+    respond_to do |format|
+      if @art.update(art_params)
+        format.html { redirect_to @art, notice: 'Your art was successfully updated.' }
+      else
+        format.html { render :edit }
+      end
+    end
   end
 
   private
