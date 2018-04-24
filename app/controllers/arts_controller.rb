@@ -12,11 +12,18 @@ class ArtsController < ApplicationController
   def new
     @art = Art.new
     authorize @art
+    # render layout: 'modal'
   end
 
   def create
     @art = Art.new(art_params)
     authorize @art
+    @art.user_id = current_user.id
+    if @art.save
+      redirect_to arts_path(@art)
+    else
+      render :new
+    end
   end
 
   def show

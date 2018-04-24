@@ -1,5 +1,5 @@
 class Art < ApplicationRecord
-  belongs_to :user_id
-  belongs_to :artist_id
+  belongs_to :user
+  belongs_to :artist, required: false
   mount_uploader :photo, PhotoUploader
 end

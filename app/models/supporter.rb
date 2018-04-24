@@ -1,4 +1,4 @@
 class Supporter < ApplicationRecord
-  belongs_to :user_id
-  belongs_to :art_id
+  belongs_to :user
+  belongs_to :art
 end
