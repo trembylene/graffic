@@ -61,7 +61,6 @@
     <% else %>
 
       <!-- Login link (when logged out) -->
-      <%= render "devise/shared/modal" %>
       <%= link_to t(".sign_in", default: "Login"), "#", class: "navbar-wagon-item navbar-wagon-link", data: {toggle: "modal", target: "#login-modal"} %>
       <%= link_to t(".sign_up", default: "Sign up"), "#", class: "navbar-wagon-item navbar-wagon-link", data: {toggle: "modal", target: "#login-modal"} %>
     <% end %>
@@ -133,3 +132,4 @@
   </div>
 </div>
 
+      <%= render "devise/shared/modal" %>
