@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-lg-6">
+      <div class="art-show" style="background-image: url(<%= @art.photo %>);">
+      </div>
+    </div>
+    <div class="col-xs-12 col-lg-6">
+      <div class="art-description">
+        <h3>
+          <%= @art.title %>
+          <% if @art.user == current_user %>
+            <small>
+              <%= link_to "", edit_art_path(@art), :class => "fa fa-edit fa-lg" %>
+              <%= link_to "", art_path(@art),
+                :class => "fa fa-trash-o fa-lg",
+                method: :delete,
+                data: { confirm: "Are you sure?" } %>
+            </small>
+          <% end %>
+        </h3>
+        <h4><%= @art.description %></h4>
+        <br>
+        <h4><em>Details</em></h4>
+        <p><strong>art location:</strong> <%= @art.location %></p>
+        <p><strong>art tags:</strong> <%= @art.tags %></p>
+      </div>
+    </div>
+  </div>
+</div>
