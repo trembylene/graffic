@@ -2,7 +2,7 @@
   <div>
     <!-- Logo -->
     <%= link_to root_path, class: "navbar-wagon-brand" do %>
-      <%= image_tag "logo.png", height: 50 %>
+      <%= image_tag "spray.svg", height: 50 %>
     <% end %>
 
     <!-- Search -->
@@ -32,17 +32,17 @@
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
               <%= link_to arts_path do %>
-                <%= image_tag("/assets/spray.svg") %>  <%= t(".uploaded_art", default: "Art I've Uploaded") %>
+                <%= image_tag("/assets/photo-camera.svg", class: "custom_icon") %>  <%= t(".uploaded_art", default: "Art I've Uploaded") %>
               <% end %>
             </li>
             <li>
               <%= link_to arts_path do %>
-                <i class="fa fa-tree"></i>  <%= t(".my_street-art", default: "My Street Art") %>
+                <%= image_tag("/assets/spray.svg", class: "custom_icon") %>  <%= t(".my_street-art", default: "My Street Art") %>
               <% end %>
             </li>
             <li>
               <%= link_to arts_path do %>
-                <i class="fa fa-tree"></i>  <%= t(".my_likes", default: "Hearted Art") %>
+                <%= image_tag("/assets/heart.svg", class: "custom_icon") %>  <%= t(".my_likes", default: "Hearted Art") %>
               <% end %>
             </li>
             <li>
@@ -79,17 +79,17 @@
         </li>
         <li>
           <%= link_to arts_path do %>
-            <i class="fa fa-tree"></i>  <%= t(".uploaded_art", default: "Uploaded Art") %>
+          <%= image_tag("/assets/photo-camera.svg", class: "custom_icon") %>  <%= t(".uploaded_art", default: "Art I've Uploaded") %>
           <% end %>
         </li>
         <li>
           <%= link_to new_art_path do %>
-            <i class="fa fa-leaf"></i> <%= t(".my_street-art", default: "My Street Art / My Collection") %>
+          <%= image_tag("/assets/spray.svg", class: "custom_icon") %>  <%= t(".my_street-art", default: "My Street Art") %>
           <% end %>
         </li>
         <li>
           <%= link_to arts_path do %>
-            <i class="fa fa-bookmark-o"></i>  <%= t(".my_likes", default: "My likes / Art I liked") %>
+          <%= image_tag("/assets/heart.svg", class: "custom_icon") %>  <%= t(".my_likes", default: "Hearted Art") %>
           <% end %>
         </li>
         <li>
