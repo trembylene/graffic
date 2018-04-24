@@ -12,6 +12,8 @@ gem 'pg', '~> 0.21'
 gem 'puma'
 gem 'rails', '5.1.6'
 gem 'redis'
+gem 'rails_real_favicon'
+gem 'fontcustom'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
