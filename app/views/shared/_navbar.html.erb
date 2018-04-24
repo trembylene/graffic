@@ -24,7 +24,7 @@
 
       <!-- Links when logged in -->
       <%= link_to "Upload Street Art", new_art_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "My Profile", user_path(@current_user), class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "My Profile", user_path(current_user), class: "navbar-wagon-item navbar-wagon-link" %>
 
 
       <!-- Avatar with dropdown menu -->
@@ -80,7 +80,7 @@
           <% end %>
         </li>
         <li>
-          <%= link_to user_path(@current_user) do %>
+          <%= link_to user_path(current_user) do %>
           <%= image_tag("/assets/hacker.svg", class: "custom_icon") %> <%= t(".my_profile", default: "My Profile") %>
           <% end %>
         </li>
