@@ -7,7 +7,7 @@
     <%= f.input :email, required: true, autofocus: true %>
     <%= f.input :avatar %>
     <%= f.input :info %>
-    <%= f.input :type, collection: User::TYPE, as: :radio_buttons, required: true %>
+    <%= f.input :type, collection: User::TYPE.invert, as: :radio_buttons, required: true %>
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
       <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
