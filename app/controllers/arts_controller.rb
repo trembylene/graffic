@@ -12,7 +12,6 @@ class ArtsController < ApplicationController
   def new
     @art = Art.new
     authorize @art
-    # render layout: 'modal'
   end
 
   def create
