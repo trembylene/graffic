@@ -80,6 +80,11 @@
           <% end %>
         </li>
         <li>
+          <%= link_to user_path(@current_user) do %>
+          <%= image_tag("/assets/hacker.svg", class: "custom_icon") %> <%= t(".my_profile", default: "My Profile") %>
+          <% end %>
+        </li>
+        <li>
           <%= link_to arts_path do %>
           <%= image_tag("/assets/photo-camera.svg", class: "custom_icon") %>  <%= t(".uploaded_art", default: "Art I've Uploaded") %>
           <% end %>
