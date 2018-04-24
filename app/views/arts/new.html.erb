@@ -1,5 +1,9 @@
 <div class="forms">
-  <h2 class="text-center">Upload Art</h2>
+  <% if current_user.is_a?(StreetArtist) %>
+    <h2 class="text-center">Upload Your Art</h2>
+  <% else %>
+    <h2 class="text-center">Upload Art</h2>
+  <% end %>
    <div class="container">
       <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
