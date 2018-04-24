@@ -1,14 +1,17 @@
-.art-show {
-  height: 350px;
-  width: 80%;
-  border-radius: 2px;
-  background-size: cover !important;
-  background-position: center;
-  border: 1 solid rgba(0,0,0,0.4);
-  margin-top: 10vh;
-  margin-bottom: 5vh;
+.avatar-large {
+  width: 50px;
+  border-radius: 50%;
 }
 
-.art-description{
-  margin-top: 10vh;
+.custom_icon-large {
+  width: 30px;
+  height: 22px;
+  vertical-align: text-bottom;
+  margin-bottom: 1px;
+}
+
+.test {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
