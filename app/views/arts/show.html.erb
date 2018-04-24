@@ -1,0 +1,99 @@
+<div class="text-center"></div>
+
+<div class="banner" style="background-image: url('<%= @art.photo %>');">
+  <div class="banner-content">
+    <h1><%= @art.title %></h1>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-lg-6">
+      <div class="art-body">
+        <div class="test">
+          <ul class="list-inline">
+            <li><h3>
+              <%= @art.title %>
+              <% if @art.user == current_user %>
+                <small class="title-icons">
+                  <%= link_to "", edit_art_path(@art), :class => "fa fa-pencil fa-lg" %>
+                  <%= link_to "", art_path(@art),
+                    :class => "fa fa-trash-o fa-lg",
+                    method: :delete,
+                    data: { confirm: "Are you sure?" } %>
+                </small>
+              <% end %>
+            </h3></li>
+            <li><%= image_tag("/assets/heart.svg", class: "custom_icon-large") %> 45</li>
+          </ul>
+          <div class="avatar"><%= cl_image_tag current_user.avatar, class: "avatar-large" %></div>
+        </div>
+        <div>
+          <h4><%= @art.description %></h4>
+          <br>
+          <h4><em>Details</em></h4>
+          <p><strong>Location:</strong> <%= @art.location %></p>
+          <p><strong>Artist:</strong> <%= @art.artist_id %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <!-- Comments - Will be changed soon with JS -->
+  <div class="comment">
+    <img class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
+    <div class="comment-name">
+      <h3>Gab Dehan</h3>
+      <p>22/04/18</p>
+    </div>
+    <div class="comment-body">
+      <p><strong>Congrats! Loved!</strong></p>
+      <p>
+        “It is a place where East and West, past and present co-exist and collide. ‘Old Town Central’ is an evergreen promotion programme and new elements will be added to it in the future.”
+      </p>
+    </div>
+  </div>
+
+  <div class="comment">
+    <img class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/ssaunier">
+    <div class="comment-name">
+      <h3>John Boavida</h3>
+      <p>10/02/18</p>
+    </div>
+    <div class="comment-body">
+      <p><strong>So impressive!</strong></p>
+      <p>
+        I am not sure yet! I might be in Shanghai at this moment... Can I tell you later?
+      </p>
+    </div>
+  </div>
+
+  <div class="comment">
+    <img class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/eschults">
+    <div class="comment-name">
+      <h3>Jack Loko</h3>
+      <p>10/02/18</p>
+    </div>
+    <div class="comment-body">
+      <p><strong>Amazing art!</strong></p>
+      <p>
+        Lorem ipsum dolor sit amet, ignota urbanitas prodesset ea eam, et vis illum principes intellegam. Ea sit pertinax sententiae, eum at meis mundi ridens, no mel adhuc ridens omnium. Et constituto mediocritatem eum, oblique omnesque definitionem id cum. Iriure appetere delicata et his.
+      </p>
+    </div>
+  </div>
+
+
+  <!-- Map / Location -->
+  <div class="row">
+    <div class="col-xs-12 col-lg-6">
+      <div id="map" style="width: 80%; height: 350px;">
+      </div>
+    </div>
+  </div>
+</div>
