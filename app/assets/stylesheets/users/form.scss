@@ -1,0 +1,34 @@
+.forms {
+  h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+}
+
+.shared-link {
+  text-decoration: none;
+  color: black;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit-button {
+  padding: 5px 0px;
+  width: 100%;
+}
+
+.text-center {
+  margin-top: 85px;
+}
+
+.form-check-input.boolean.optional {
+  height: 17px;
+  margin-right: 5px;
+}
