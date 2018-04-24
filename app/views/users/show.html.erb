@@ -1,46 +1,84 @@
-<h1>Profile page</h1>
+<div class="profile-headings">
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <% if @user.avatar %>
+        <div class="profile-avatar">
+          <div class="avatar avatar-large" style="background-image: url(<%= @user.avatar %>);">
+            <% if @user.type == "StreetArtist" %>
+              <div class="street-artist-badge">A</div>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+      <div class="profile-titles">
+        <h3><%= @user.alias %></h3>
+        <% if @user.type == "StreetArtist" %>
+          <h4>Street Artist</h4>
+        <% else %>
+          <h4>Art Enthusiast</h4>
+        <% end %>
+      </div>
 
-<% if @user.avatar %>
-  <div class="avatar" style="background-image: url(<%= @user.avatar %>);">
-    <% if @user.type == "StreetArtist" %>
-      <div class="street-artist-badge">A</div>
-    <% end %>
-  </div>
-<% end %>
+      <!-- <h4> Amount of Hearts </h4> -->
+      <!-- <h4> Amount of Uploads </h4> -->
 
-<h3><%= @user.alias %></h3>
-
-<!-- <h4> Amount of Hearts </h4> -->
-<!-- <h4> Amount of Uploads </h4> -->
-
-
-
-<ul class="nav nav-tabs" role="tablist">
-  <li role="presentation" class="active"><a href="#about-me" aria-controls="about-me" role="tab" data-toggle="tab">About Me</a></li>
-  <li role="presentation"><a href="#my-street-art" aria-controls="my-street-art" role="tab" data-toggle="tab">My Street Art</a></li>
-  <li role="presentation"><a href="#hearted-art" aria-controls="hearted-art" role="tab" data-toggle="tab">Hearted Art</a></li>
-  <li role="presentation"><a href="#uploaded-art" aria-controls="uploaded-art" role="tab" data-toggle="tab">Uploaded Art</a></li>
-</ul>
-
-<div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="about-me">
-  <!-- Tab 1: About me -->
-    <% if @user.info %>
-      <p><%= @user.info %></p>
-    <% end %>
-  </div>
-  <% if @user.type == "StreetArtist" %>
-    <div role="tabpanel" class="tab-pane" id="my-street-art">
-      <!-- Tab 2: My Street Art (if street artist) -->
-      <p>placeholder my street art</p>
+      <% if @user.info %>
+        <p class="info"><%= @user.info %></p>
+      <% end %>
     </div>
-    <% end %>
-  <div role="tabpanel" class="tab-pane" id="hearted-art">
-    <!-- Tab 3: Hearted Art -->
-    <p>placeholder hearted art</p>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="uploaded-art">
-    <!-- Tab 4: Uploaded Art -->
-    <p>placeholder uploaded art</p>
   </div>
 </div>
+</div>
+
+<div class="profile-tabs">
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <ul class="nav nav-tabs tabs" role="tablist">
+        <li role="presentation" class="active tab hearted-tab">
+          <a href="#hearted-art" aria-controls="hearted-art" role="tab" data-toggle="tab">
+            <h2>250</h2>
+            <p>Hearted Art</p>
+          </a>
+        </li>
+        <li role="presentation" class="tab street-art-tab">
+          <a href="#my-street-art" aria-controls="my-street-art" role="tab" data-toggle="tab">
+            <h2>23</h2>
+            <p>My Street Art</p>
+          </a>
+        </li>
+        <li role="presentation" class="tab">
+          <a href="#uploaded-art" aria-controls="uploaded-art uploaded-tab" role="tab" data-toggle="tab">
+            <h2>23</h2>
+            <p>Uploaded Art</p>
+          </a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="hearted-art">
+          <!-- Tab 3: Hearted Art -->
+          <p>placeholder hearted art card</p>
+          <p>placeholder hearted art card</p>
+        </div>
+        <% if @user.type == "StreetArtist" %>
+          <div role="tabpanel" class="tab-pane" id="my-street-art">
+            <!-- Tab 2: My Street Art (if street artist) -->
+            <p>placeholder my street art card</p>
+            <p>placeholder my street art card</p>
+          </div>
+        <% end %>
+        <div role="tabpanel" class="tab-pane" id="uploaded-art">
+          <!-- Tab 4: Uploaded Art -->
+          <p>placeholder uploaded art card</p>
+          <p>placeholder uploaded art card</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+

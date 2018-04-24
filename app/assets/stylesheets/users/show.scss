@@ -1,0 +1,199 @@
+// profile page
+body {
+  font-family: $body-font;
+}
+
+h2 {
+  font-size: 26px;
+}
+
+.profile-headings {
+  background-color: white;
+  margin-bottom: 2vh;
+  padding-bottom: 20px;
+}
+
+.profile-avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-titles {
+  text-align: center;
+}
+
+.street-artist-badge {
+  position: absolute;
+  background-color: $crimson;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  text-align: center;
+  border: $crimson-border 1px solid;
+}
+
+.profile-tabs {
+  background-color: white;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  a {
+  color: black;
+  }
+  a:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: gray;
+  background-color: white !important;
+  border: none;
+  }
+  h3 {
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 0;
+  }
+  p {
+  opacity: 0.5;
+  margin-bottom: 0;
+  }
+  > li.active > a {
+    border-top: white solid 0px !important;
+    border-left: white solid 0px !important;
+    border-right: white solid 0px !important;
+    border-bottom: $crimson solid 5px !important;
+    background-color: white !important;
+    color: $crimson !important;
+  }
+  li.active {
+    a:focus {
+      background-color: none !important;
+    }
+  }
+  a:active, a:hover {
+    outline: none !important;
+  }
+}
+
+.tab {
+  flex: 0 0 25%;
+  text-align: center;
+  padding-bottom: 20px;
+  .active {
+  background-color: white !important;
+  }
+}
+
+
+// SMALL DEVICES
+@media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */
+h2 {
+  font-size: 22px;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+.info {
+  margin-top: 30px;
+  text-align: justify;
+}
+
+.tabs {
+  align-items: flex-end;
+}
+
+.profile-avatar {
+  margin-top: 2vh;
+}
+
+.street-artist-badge {
+  font-size: 16px;
+  height: 25px;
+  width: 25px;
+  bottom: -1px;
+  right: -1px;
+}
+
+.street-art-tab {
+  flex-grow: 1;
+}
+}
+
+@media (min-width:380px) {
+.street-art-tab {
+  min-width: 100px;
+  max-width: 130px;
+}
+
+}
+
+
+// MEDIUM DEVICES
+@media (min-width:468px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+h3 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+.profile-avatar {
+  margin-top: 5vh;
+}
+
+.street-artist-badge {
+  font-size: 20px;
+  height: 30px;
+  width: 30px;
+  bottom: 5px;
+  right: 5px;
+}
+
+.street-art-tab, .hearted-tab, .uploaded-tab {
+  min-width: 130px;
+  max-width: 180px;
+}
+}
+
+// LARGE DEVICES
+@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */
+h3 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+.tab {
+  p {
+    font-size: 20px;
+  }
+}
+
+.profile-avatar {
+  margin-top: 8vh;
+}
+
+.street-artist-badge {
+  font-size: 22px;
+  height: 35px;
+  width: 35px;
+  bottom: 10px;
+  right: 10px;
+}
+
+}
