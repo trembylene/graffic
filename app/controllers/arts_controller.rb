@@ -44,6 +44,6 @@ class ArtsController < ApplicationController
   end
 
   def art_params
-    params.require(:art).permit(:title, :location, :description, :tags, :photo, :photo_cache, :painted_over, :published, :owner)
+    params.require(:art).permit(:title, :location, :latitude, :longitude, :description, :tags, :photo, :photo_cache, :painted_over, :published, :owner)
   end
 end
