@@ -4,6 +4,9 @@
     <%= f.input :photo %>
     <%= f.input :photo_cache, as: :hidden %>
     <%= f.input :location, required: true  %>
+    <%= button_tag "Get Location", type: "button", data: { :'loading-text' => "Locating…", :'reset-text' => "Get Location" }, id: "locator" %>
+    <%= f.input :latitude, as: :hidden %>
+    <%= f.input :longitude, as: :hidden %>
     <%= f.input :title, required: true %>
     <%= f.input :description, required: true  %>
     <%= f.input :tags %>
