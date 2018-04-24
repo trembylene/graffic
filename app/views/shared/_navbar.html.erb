@@ -24,6 +24,8 @@
 
       <!-- Links when logged in -->
       <%= link_to "Upload Street Art", new_art_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "My Profile", user_path(current_user), class: "navbar-wagon-item navbar-wagon-link" %>
+
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
@@ -75,6 +77,11 @@
         <li>
           <%= form_tag(search_arts_path, :method => "get", id: "search-form", class: "navbar-wagon-item navbar-wagon-link", type:"search") do %>
             <%= text_field_tag :search, params[:search], placeholder: "Search" %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to user_path(current_user) do %>
+          <%= image_tag("/assets/hacker.svg", class: "custom_icon") %> <%= t(".my_profile", default: "My Profile") %>
           <% end %>
         </li>
         <li>
@@ -132,4 +139,4 @@
   </div>
 </div>
 
-      <%= render "devise/shared/modal" %>
+<%= render "devise/shared/modal" %>
