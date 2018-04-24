@@ -19,8 +19,9 @@ class ArtsController < ApplicationController
     @art = Art.new(art_params)
     authorize @art
     @art.user_id = current_user.id
+    @art.artist_id = current_user.id if params[:other][:owner] == "1"
     if @art.save
-      redirect_to arts_path(@art)
+      redirect_to arts_path
     else
       render :new
     end
@@ -44,6 +45,6 @@ class ArtsController < ApplicationController
   end
 
   def art_params
-    params.require(:art).permit(:title, :location, :description, :tags, :photo, :photo_cache, :painted_over, :published)
+    params.require(:art).permit(:title, :location, :description, :tags, :photo, :photo_cache, :painted_over, :published, :owner)
   end
 end
