@@ -25,7 +25,7 @@ no_hash: true
 force: false
 
 # Display (possibly useful) debugging messages.
-debug: false
+debug: true
 
 # Hide status messages.
 quiet: false
@@ -51,7 +51,7 @@ quiet: false
 input:
 #  vectors: my/vectors
 #  templates: my/templates
-vectors: app/assets/icons
+  vectors: app/assets/icons
 
 output:
 #  fonts: app/assets/fonts
@@ -76,13 +76,13 @@ output:
 #   Default: css, preview
 # -----------------------------------------------------------------------------
 
-#templates:
+templates:
 - scss-rails
 #- preview
 #- my-custom-template.yml
 
 #preprocessor_path: ../fonts/
-preprocessor_path: ""
+preprocessor_path: "app/assets/icons"
 
 # -----------------------------------------------------------------------------
 # Font Settings (defaults shown)
