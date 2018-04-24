@@ -28,6 +28,7 @@ class ArtsController < ApplicationController
   end
 
   def show
+    authorize @art
   end
 
   def edit
