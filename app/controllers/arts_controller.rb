@@ -7,6 +7,22 @@ class ArtsController < ApplicationController
   end
 
   def search
+    if params[:search]
+      @arts = policy_scope(Art.search(params[:search]))
+    else
+      @arts = policy_scope(Art).order(created_at: :desc)
+    end
+    @markers = @arts.map do |art|
+      {
+        lat: art.latitude,
+        lng: art.longitude,
+        id: art.id,
+        # icon: 'https://res.cloudinary.com/trembylene/image/upload/v1524193056/pin.png',
+        infoWindow: {
+          content: "<a href='#{art.id}'><img src='#{art.photo}' class='photo_markers' /><strong>#{art.title}</strong><br>"
+        }
+      }
+    end
   end
 
   def new

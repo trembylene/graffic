@@ -1,0 +1,22 @@
+<% if @arts.blank? %>
+  <div class="container">
+    <h2>No matches for <%= params[:search] %>.</h2>
+  </div>
+<% else %>
+  <div class="container">
+    <h2>Search Results (<%= @arts.count %>)</h2>
+  </div>
+<% end %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8">
+        <%= render "card_container" %>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <%= render "map" %>
+    </div>
+  </div>
+</div>
+
+
