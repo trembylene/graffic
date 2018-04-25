@@ -8,12 +8,9 @@
 
 
 
-
-
-
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-lg-6">
+    <div class="col-xs-12">
       <div class="art-body">
         <div class="test">
           <ul class="list-inline">
@@ -31,7 +28,7 @@
             </h3></li>
             <li><%= image_tag("/assets/heart.svg", class: "custom_icon-large") %> 45</li>
           </ul>
-          <div class="avatar"><%= cl_image_tag current_user.avatar, class: "avatar-large" %></div>
+          <div><%= cl_image_tag current_user.avatar, class: "avatar-large avatar-profile" %></div>
         </div>
         <div>
           <h4><%= @art.description %></h4>
@@ -47,7 +44,7 @@
 
   <!-- Comments - Will be changed soon with JS -->
   <div class="comment">
-    <img class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
+    <span><img class="avatar-small" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan"></span>
     <div class="comment-name">
       <h3>Gab Dehan</h3>
       <p>22/04/18</p>
@@ -61,7 +58,7 @@
   </div>
 
   <div class="comment">
-    <img class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/ssaunier">
+    <span><img class="avatar-small" src="https://kitt.lewagon.com/placeholder/users/ssaunier"></span>
     <div class="comment-name">
       <h3>John Boavida</h3>
       <p>10/02/18</p>
@@ -75,7 +72,7 @@
   </div>
 
   <div class="comment">
-    <img class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/eschults">
+    <span><img class="avatar-small" src="https://kitt.lewagon.com/placeholder/users/eschults"></span>
     <div class="comment-name">
       <h3>Jack Loko</h3>
       <p>10/02/18</p>
