@@ -1,6 +1,7 @@
 function autocomplete() {
   document.addEventListener("DOMContentLoaded", function() {
     var artAddress = document.getElementById('art_location');
+    var city = document.getElementById('city_location');
 
     function onPlaceChanged() {
       var place = this.getPlace();
@@ -10,6 +11,16 @@ function autocomplete() {
 
     if (artAddress) {
       var autocomplete = new google.maps.places.Autocomplete(artAddress, { types: [ 'geocode' ] });
+      google.maps.event.addListener(autocomplete, 'place_changed', onPlaceChanged);
+      google.maps.event.addDomListener(artAddress, 'keydown', function(e) {
+        if (e.key === "Enter") {
+          e.preventDefault(); // Do not submit the form on Enter.
+        }
+      });
+    }
+
+    if (city) {
+      var autocomplete = new google.maps.places.Autocomplete(artAddress, { types: [ '(cities)' ] });
       google.maps.event.addListener(autocomplete, 'place_changed', onPlaceChanged);
       google.maps.event.addDomListener(artAddress, 'keydown', function(e) {
         if (e.key === "Enter") {
