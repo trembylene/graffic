@@ -1,0 +1,26 @@
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.search-filters {
+  padding: 20px 20px;
+  a {
+    color: #616668;
+    &:hover {
+      color: #da552f;
+      text-decoration: none;
+    }
+  }
+}
+
+.navbar-wagon-link {
+  color: #616668;
+  font-size: 14px;
+}
+.navbar-wagon-link:hover {
+  color: #da552f;
+  text-decoration: none;
+}
