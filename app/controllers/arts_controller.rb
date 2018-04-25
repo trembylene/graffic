@@ -7,11 +7,16 @@ class ArtsController < ApplicationController
   end
 
   def search
-    if params[:search]
-      @arts = policy_scope(Art.search(params[:search]))
+    if params[:search_location]
+      @arts = policy_scope(Art.search_location(params[:search]))
     else
       @arts = policy_scope(Art).order(created_at: :desc)
     end
+    # if params[:search]
+    #   @arts = policy_scope(Art.search(params[:search]))
+    # else
+    #   @arts = policy_scope(Art).order(created_at: :desc)
+    # end
     @markers = @arts.map do |art|
       {
         lat: art.latitude,
