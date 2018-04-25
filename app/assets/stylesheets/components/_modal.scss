@@ -1,0 +1,113 @@
+.modal-body {
+  margin: 20px;
+}
+
+
+.modal-content {
+  border-radius: 5px;
+  .modal-header {
+    border: none;
+  }
+}
+
+.modal-tabs {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  a {
+  color: black;
+  }
+  a:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: gray;
+  background-color: white !important;
+  border: none;
+  }
+  h3 {
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 0;
+  }
+  p {
+  opacity: 0.5;
+  margin-bottom: 0;
+  }
+  > li.active > a {
+    border-top: white solid 0px !important;
+    border-left: white solid 0px !important;
+    border-right: white solid 0px !important;
+    border-bottom: $crimson solid 5px !important;
+    background-color: white !important;
+    color: $crimson !important;
+  }
+  li.active {
+    a:focus {
+      background-color: none !important;
+    }
+  }
+  a:active, a:hover {
+    outline: none !important;
+  }
+}
+
+.form-group {
+  input {
+    .email {
+      font-size: 14px;
+      background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-icon-email.svg')
+    }
+  }
+}
+
+.form-inputs {
+  .input-group {
+    margin-bottom: 40px;
+  }
+}
+
+.form-check {
+  .form-check-label {
+    font-weight: normal;
+  }
+  label {
+    font-weight: normal;
+    margin-left: 20px;
+  }
+  .form-check-input {
+    width: 30px;
+    height: 16px;
+  }
+}
+
+.radio_buttons {
+  legend {
+    font-size: 24px;
+    text-align: center;
+  }
+}
+
+.form-check-input.boolean.optional {
+  width: 30px;
+  height: 16px;
+}
+
+.form-actions {
+  .submit-button {
+    margin-bottom: 20px;
+  }
+}
+
+#basic-addon1, #basic-addon2, #basic-addon3, #basic-addon4 {
+  background-color: white;
+  color: #bababa;
+  padding: 0px 14px;
+}
+
+#user_email, #user_password, #user_alias, #user_password_confirmation {
+  height: 55px;
+}
+
+.invalid-feedback {
+
+}
