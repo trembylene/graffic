@@ -13,12 +13,17 @@ h2 {
   padding-bottom: 20px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   margin-top: 3vh;
+  border-radius: 3px;
 }
 
 .profile-avatar {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.info {
+  padding: 0 8px;
 }
 
 .profile-titles {
@@ -39,6 +44,8 @@ h2 {
   background-color: white;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   margin-bottom: 3vh;
+  border-radius: 3px;
+  padding-bottom: 20px;
 }
 
 .tabs {

@@ -1,6 +1,7 @@
 class Art < ApplicationRecord
   belongs_to :user
   belongs_to :artist, class_name: "User", required: false
+  has_many :supporters
   mount_uploader :photo, PhotoUploader
 
   validates :location, presence: true

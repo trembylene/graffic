@@ -17,7 +17,6 @@ class ArtsController < ApplicationController
         lat: art.latitude,
         lng: art.longitude,
         id: art.id,
-        # icon: 'https://res.cloudinary.com/trembylene/image/upload/v1524193056/pin.png',
         infoWindow: {
           content: "<a href='#{art.id}'><img src='#{art.photo}' class='photo_markers' /><strong>#{art.title}</strong><br>"
         }
@@ -44,6 +43,14 @@ class ArtsController < ApplicationController
 
   def show
     authorize @art
+    @markers = {
+      lat: @art.latitude,
+      lng: @art.longitude,
+      id: @art.id,
+      infoWindow: {
+        content: "<a href='#{@art.id}'><img src='#{@art.photo}' class='photo_markers' /><strong>#{@art.title}</strong><br>"
+      }
+    }
   end
 
   def edit
