@@ -1,3 +1,22 @@
-<div class="text-center"></div>
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container-banner" style="background-image: url(<%= asset_path 'grafficbanner2.jpg' %>)">
+  <div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1 class="title-banner text-center"><span>Graffic</span></h1>
+      <h2 class="byline-banner text-center"><span>Find and share street art</span></h2>
+      <%= link_to "Explore Street Art", arts_path, class: "btn btn-danger" %>
+    </div>
+  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="card-container">
+        <h2 class="page-title">Most Popular Street Art</h2>
+       <%= render '/shared/cards_home' %>
+      </div>
+    </div>
+  </div>
+</div>
