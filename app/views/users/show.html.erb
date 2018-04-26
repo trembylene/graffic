@@ -38,7 +38,7 @@
             <p>Hearted Art</p>
           </a>
         </li>
-        <% if policy(@user).street_artist? %>
+        <% if @user.street_artist? %>
         <li role="presentation" class="tab street-art-tab">
           <a href="#my-street-art" aria-controls="my-street-art" role="tab" data-toggle="tab">
             <h2>23</h2>
@@ -60,7 +60,7 @@
           <p>placeholder hearted art card</p>
           <p>placeholder hearted art card</p>
         </div>
-        <% if policy(@user).street_artist? %>
+        <% if @user.street_artist? %>
           <div role="tabpanel" class="tab-pane" id="my-street-art">
             <!-- Tab 2: My Street Art (if street artist) -->
             <%= render '/shared/cards_my_street_art' %>

@@ -19,4 +19,8 @@ class User < ApplicationRecord
   def toggle_like(art)
     liked?(art) ? art.unliked_by(self) : art.liked_by(self)
   end
+
+  def street_artist?
+    false
+  end
 end
