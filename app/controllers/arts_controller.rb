@@ -15,9 +15,12 @@ class ArtsController < ApplicationController
       @arts = policy_scope(Art.near(params[:search_location], 50).order("distance"))
     end
     if params[:filter] == "popular"
-      @arts = policy_scope(@arts.order(get_likes: :desc))
+      @arts = policy_scope(@arts.left_outer_joins(:votes_for)
+            .select('arts.*, COUNT(votes.id) AS votes_count')
+            .group('arts.id')
+            .having('COUNT(votes.id) > 0'))
     elsif params[:filter] == "recent"
-      @arts = policy_scope(@arts.order(created_at: :desc))
+      @arts = policy_scope(@arts.reorder(created_at: :desc))
     end
     if params[:search]
       @arts = policy_scope(@arts.search(params[:search]))
