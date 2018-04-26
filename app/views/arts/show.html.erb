@@ -12,7 +12,7 @@
   <div class="row">
     <div class="col-xs-12">
       <div class="art-body">
-        <div class="test">
+        <div class="art-body-show">
           <ul class="list-inline">
             <li><h3>
               <%= @art.title %>
@@ -27,6 +27,8 @@
               <% end %>
             </h3></li>
             <li><%= image_tag("/assets/heart.svg", class: "custom_icon-large") %> 45</li>
+
+            <%= link_to "", like_art_path(@art.id), id: "like_#{@art.id}", class: "glyphicon glyphicon-heart#{current_user.liked?(@art) ? '' : '-empty'}", remote: true %>
           </ul>
           <div><%= cl_image_tag current_user.avatar, class: "avatar-large avatar-profile" %></div>
         </div>

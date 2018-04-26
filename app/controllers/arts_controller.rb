@@ -1,6 +1,6 @@
 class ArtsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :search, :show]
-  before_action :find_art, only: [:show, :update, :edit]
+  before_action :set_art, only: [:show, :update, :edit, :like]
 
   def index
     @arts = policy_scope(Art).order(created_at: :desc)
@@ -27,15 +27,12 @@ class ArtsController < ApplicationController
   end
 
   def show
-    authorize @art
   end
 
   def edit
-    authorize @art
   end
 
   def update
-    authorize @art
     @art.update(art_params)
     respond_to do |format|
       if @art.update(art_params)
@@ -46,13 +43,22 @@ class ArtsController < ApplicationController
     end
   end
 
-  private
-
-  def find_art
-    @art = Art.find(params[:id])
+  def like
+    current_user.toggle_like(@art)
+    respond_to do |format|
+      format.html { redirect_to :back }
+      format.js
+    end
   end
+
+  private
 
   def art_params
     params.require(:art).permit(:title, :location, :latitude, :longitude, :description, :tags, :photo, :photo_cache, :painted_over, :published, :owner)
+  end
+
+  def set_art
+    @art = Art.find(params[:id])
+    authorize @art
   end
 end

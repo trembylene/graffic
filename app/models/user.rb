@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  acts_as_voter
+
   has_many :supporters, dependent: :destroy
   has_many :arts
   mount_uploader :avatar, PhotoUploader
@@ -14,4 +16,7 @@ class User < ApplicationRecord
     'StreetArtist' => 'Street Artist',
   }
 
+  def toggle_like(art)
+    liked?(art) ? art.unliked_by(self) : art.liked_by(self)
+  end
 end

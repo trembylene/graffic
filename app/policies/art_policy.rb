@@ -21,6 +21,14 @@ class ArtPolicy < ApplicationPolicy
     update?
   end
 
+  def like?
+    true
+  end
+
+  def unlike?
+    true
+  end
+
   def record_belongs_to_user_or_admin?
     return false unless user
     record.user == user || user.admin
