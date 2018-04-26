@@ -89,6 +89,10 @@ class ArtsController < ApplicationController
     @arts = policy_scope(Art.where(artist_id: current_user.id))
   end
 
+  def uploaded
+    @arts = policy_scope(Art.where(user_id: current_user.id))
+  end
+
   private
 
   def art_params
