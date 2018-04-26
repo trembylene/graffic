@@ -89,6 +89,10 @@ GEM
       listen
       thor
     geocoder (1.4.7)
+    geokit (1.11.0)
+    geokit-rails (2.3.0)
+      geokit (~> 1.5)
+      rails (>= 3.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     http-cookie (1.0.3)
@@ -246,6 +250,7 @@ DEPENDENCIES
   font-awesome-sass (~> 4.7)
   fontcustom
   geocoder
+  geokit-rails
   jbuilder (~> 2.0)
   listen (~> 3.0.5)
   pg (~> 0.21)

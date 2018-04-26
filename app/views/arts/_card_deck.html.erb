@@ -1,0 +1,24 @@
+<% @arts.each do |art| %>
+  <div class="col-xs-12 col-sm-6">
+    <div class="card">
+      <div class="card-header">
+        <h2 class="card-title"><%= art.title %></h2>
+      </div>
+      <div class="card-body">
+        <div class="card-photo" style="background-image: url(<%= art.photo %>);">
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="avatars">
+          <div class="avatar avatar-card-user" style="background-image: url(<%= art.user.avatar %>);"></div>
+          <div class="avatar avatar-card-artist" style="background-image: url(<%= art.user.avatar %>);"></div>
+        </div>
+        <p class="card-description">First five words of description...</p>
+        <div class="read-more">
+          <%= link_to "Read More", art_path(art) %>
+        </div>
+      </div>
+      <%= link_to "", art_path(art), class: "card-link"  %>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,72 @@
+.form-upload-art {
+  margin-top: 5vh;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 3px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  h2 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .btn {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.form-edit-profile {
+  margin-top: 5vh;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 3px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  h2 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .btn {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.unhappy-account {
+  margin-top: 50px;
+}
+
+.forms {
+  h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+}
+
+.shared-link {
+  text-decoration: none;
+  color: black;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit-button {
+  padding: 5px 0px;
+  width: 100%;
+}
+
+.form-check-input.boolean.optional {
+  height: 17px;
+  margin-right: 5px;
+}
