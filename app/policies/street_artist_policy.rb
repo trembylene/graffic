@@ -13,4 +13,8 @@ class StreetArtistPolicy < ApplicationPolicy
   def street_artist?
     record.type == "StreetArtist"
   end
+
+  def user_street_art
+    true
+  end
 end
