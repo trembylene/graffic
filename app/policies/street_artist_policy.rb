@@ -9,4 +9,8 @@ class StreetArtistPolicy < ApplicationPolicy
     return false unless user
     record.user == user || user.admin
   end
+
+  def street_artist?
+    record.type == "StreetArtist"
+  end
 end
