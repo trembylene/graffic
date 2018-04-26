@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :arts, except: [:destroy], :path => "street_art" do
     collection do
       get 'search'
+      get 'mine'
     end
     member do
       get 'like'

@@ -85,6 +85,10 @@ class ArtsController < ApplicationController
     redirect_to @art
   end
 
+  def mine
+    @arts = policy_scope(Art.where(artist_id: current_user.id))
+  end
+
   private
 
   def art_params
