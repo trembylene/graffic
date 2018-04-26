@@ -16,8 +16,4 @@ class Art < ApplicationRecord
   def self.search(search)
     joins(:user).where("title ILIKE ? OR description ILIKE ? OR tags ILIKE ? OR users.alias ILIKE ?", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%")
   end
-
-  def self.search_location(search)
-    where("location ILIKE ?", "%#{search}%")
-  end
 end

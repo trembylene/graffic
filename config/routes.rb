@@ -16,3 +16,4 @@ Rails.application.routes.draw do
     resources :supporters, only: [:create, :destroy]
   end
 end
+

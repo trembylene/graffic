@@ -20,11 +20,10 @@ function autocomplete() {
     }
 
     if (city) {
-      var autocomplete = new google.maps.places.Autocomplete(artAddress, { types: [ '(cities)' ] });
-      google.maps.event.addListener(autocomplete, 'place_changed', onPlaceChanged);
-      google.maps.event.addDomListener(artAddress, 'keydown', function(e) {
+      var autocomplete = new google.maps.places.Autocomplete(city, { types: [ '(cities)' ] });
+      google.maps.event.addDomListener(city, 'keydown', function(e) {
         if (e.key === "Enter") {
-          e.preventDefault(); // Do not submit the form on Enter.
+          document.getElementById('search-location').submit();
         }
       });
     }
