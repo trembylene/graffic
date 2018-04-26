@@ -1,6 +1,6 @@
 class ArtsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :search, :show]
-  before_action :set_art, only: [:show, :update, :edit, :like]
+  before_action :set_art, only: [:show, :update, :edit, :like, :claim]
 
   def index
     @arts = policy_scope(Art).order(created_at: :desc)
@@ -78,6 +78,11 @@ class ArtsController < ApplicationController
       format.html { redirect_to :back }
       format.js
     end
+  end
+
+  def claim
+    @art.update!(artist: current_user)
+    redirect_to @art
   end
 
   private
