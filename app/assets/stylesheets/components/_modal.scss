@@ -2,7 +2,6 @@
   margin: 20px;
 }
 
-
 .modal-content {
   border-radius: 5px;
   .modal-header {
@@ -104,10 +103,10 @@
   padding: 0px 14px;
 }
 
-#user_email, #user_password, #user_alias, #user_password_confirmation {
+#user_email, #user_password, #user_alias, #user_password_confirmation, #user_current_password {
   height: 55px;
 }
 
-.invalid-feedback {
-
+#user_info {
+  height: 100px;
 }
