@@ -30,7 +30,7 @@ class ArtsController < ApplicationController
         lng: art.longitude,
         id: art.id,
         infoWindow: {
-          content: "<a href='#{art.id}'><img src='#{art.photo}' class='photo_markers' /><strong>#{art.title}</strong><br>"
+          content: "<a href='#{art.id}' id='art_#{art.id}'><strong>#{art.title}</strong><br>"
         }
       }
     end
