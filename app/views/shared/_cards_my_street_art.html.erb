@@ -15,6 +15,10 @@
               <div class="avatars">
                 <div class="avatar avatar-card-user" style="background-image: url(<%= art.user.avatar %>);"></div>
                 <div class="avatar avatar-card-artist" style="background-image: url(<%= art.user.avatar %>);"></div>
+                <div>
+                  <%= image_tag("/assets/heart.svg", class: "custom_icon-large") %>
+                  <%= art.get_likes.size %>
+                </div>
               </div>
               <p class="card-description">First five words of description...</p>
               <div class="read-more">
