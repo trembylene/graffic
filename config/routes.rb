@@ -6,6 +6,10 @@ Rails.application.routes.draw do
     collection do
       get 'search'
     end
+    member do
+      get 'like'
+      get 'unlike'
+    end
     resources :supporters, only: [:create, :destroy]
   end
 end

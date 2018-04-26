@@ -1,4 +1,6 @@
 class Art < ApplicationRecord
+  acts_as_votable
+
   belongs_to :user
   belongs_to :artist, class_name: "User", required: false
   has_many :supporters
