@@ -7,16 +7,25 @@ class ArtsController < ApplicationController
   end
 
   def search
-    if params[:search_location]
-      @arts = policy_scope(Art.search_location(params[:search]))
+    if !params[:search_location]
+      redirect_to root_path
+    elsif params[:search_location].empty?
+      redirect_to root_path
     else
-      @arts = policy_scope(Art).order(created_at: :desc)
+      @arts = policy_scope(Art.near(params[:search_location], 50))
     end
-    # if params[:search]
-    #   @arts = policy_scope(Art.search(params[:search]))
-    # else
-    #   @arts = policy_scope(Art).order(created_at: :desc)
-    # end
+    if params[:filter] == "popular"
+      @arts = policy_scope(@arts.order(created_at: :desc))
+    elsif params[:filter] == "recent"
+      @arts = policy_scope(@arts.order(created_at: :desc))
+    else
+      @arts = policy_scope(Art.near(params[:search_location], 50))
+    end
+    if params[:search]
+      @arts = policy_scope(@arts.search(params[:search]))
+    else
+      @arts = policy_scope(Art.near(params[:search_location], 50))
+    end
     @markers = @arts.map do |art|
       {
         lat: art.latitude,

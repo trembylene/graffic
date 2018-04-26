@@ -3,7 +3,7 @@ class Art < ApplicationRecord
   belongs_to :artist, class_name: "User", required: false
   has_many :supporters
   mount_uploader :photo, PhotoUploader
-  geocoded_by :full_street_address
+  geocoded_by :full_street_location
   after_validation :geocode
   reverse_geocoded_by :latitude, :longitude
 
@@ -13,9 +13,5 @@ class Art < ApplicationRecord
 
   def self.search(search)
     joins(:user).where("title ILIKE ? OR description ILIKE ? OR tags ILIKE ? OR users.alias ILIKE ?", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%")
-  end
-
-  def self.search_location(search)
-    where("location ILIKE ?", "%#{search}%")
   end
 end

@@ -3,16 +3,27 @@
     <% if @arts.blank? %>
       <h2>No matches for <%= params[:search] %>.</h2>
     <% else %>
-      <h2>Search Results (<%= @arts.count %>)</h2>
+      <h2>Search Results (<%= @arts.length %>)</h2>
     <% end %>
   </div>
   <div class="search-filters">
     <ul class="list-inline">
-      <li><%= link_to "Most Popular" %></li>
-      <li><%= link_to "Recently Added" %></li>
+      <li><%= form_tag(search_arts_path, :method => "get", id: "popular") do %>
+        <div class="form-group">
+          <%= link_to 'Popular', filter: "popular", search_location: params[:search_location] %>
+        </div>
+        <% end %>
+      </li>
+      <li><%= form_tag(search_arts_path, :method => "get", id: "recent") do %>
+        <div class="form-group">
+          <%= link_to 'Recent', filter: "recent", search_location: params[:search_location] %>
+        </div>
+        <% end %>
+      </li>
       <li><%= form_tag(search_arts_path, :method => "get", id: "search") do %>
         <div class="form-group">
           <%= text_field_tag :search, params[:search], class: "form-control", placeholder: "Filter by keyword" %>
+          <%= hidden_field_tag :search_location, params[:search_location] %>
         </div></li>
       <li><%= button_tag(type: "submit", class: "btn btn-default navbar-btn") do %>
         <i class="fa fa-search"></i>
@@ -29,7 +40,9 @@
         <%= render "card_deck" %>
     </div>
     <div class="col-xs-12 col-sm-4">
-      <%= render "map" %>
+      <% if @arts.length > 0 %>
+        <%= render "map" %>
+      <% end %>
     </div>
   </div>
 </div>
