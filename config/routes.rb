@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     member do
       get 'like'
       get 'unlike'
+      patch 'claim'
     end
     resources :supporters, only: [:create, :destroy]
   end

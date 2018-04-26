@@ -33,4 +33,8 @@ class ArtPolicy < ApplicationPolicy
     return false unless user
     record.user == user || user.admin
   end
+
+  def claim?
+    record.artist_id == nil && user.type == "StreetArtist"
+  end
 end
