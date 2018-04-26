@@ -1,9 +1,11 @@
 class Art < ApplicationRecord
+  acts_as_votable
+
   belongs_to :user
   belongs_to :artist, class_name: "User", required: false
   has_many :supporters
   mount_uploader :photo, PhotoUploader
-  geocoded_by :full_street_location
+  geocoded_by :location
   after_validation :geocode
   reverse_geocoded_by :latitude, :longitude
 

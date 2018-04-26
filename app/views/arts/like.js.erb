@@ -1,0 +1,3 @@
+document.getElementById("like_<%= @art.id %>").classList.toggle('glyphicon-heart');
+document.getElementById("like_<%= @art.id %>").classList.toggle('glyphicon-heart-empty');
+document.getElementById("likes").innerHTML = (parseInt("<%= @art.get_likes.size %>")).toString()

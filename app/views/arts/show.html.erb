@@ -1,5 +1,4 @@
 <div class="text-center"></div>
-
 <div class="banner" style="background-image: url('<%= @art.photo %>');">
   <div class="banner-content">
     <h1><%= @art.title %></h1>
@@ -12,7 +11,7 @@
   <div class="row">
     <div class="col-xs-12">
       <div class="art-body">
-        <div class="test">
+        <div class="art-body-show">
           <ul class="list-inline">
             <li><h3>
               <%= @art.title %>
@@ -26,11 +25,21 @@
                 </small>
               <% end %>
             </h3></li>
-            <li><%= image_tag("/assets/heart.svg", class: "custom_icon-large") %> 45</li>
+            <li><%= render "like" %></li>
           </ul>
-          <div><%= cl_image_tag current_user.avatar, class: "avatar-large avatar-profile" %></div>
+          <div><%= cl_image_tag @art.user.avatar, class: "avatar-large avatar-profile" %></div>
         </div>
         <div>
+          <% if policy(@art).claim? %>
+            <p>Did you create this street art? Claim it here!</p>
+            <%= link_to "Claim Art", claim_art_path(@art), class: 'btn btn-success', method: :patch %>
+          <% end %>
+
+
+
+
+
+
           <h4><%= @art.description %></h4>
           <br>
           <h4><em>Details</em></h4>

@@ -33,12 +33,12 @@
           <%= cl_image_tag current_user.avatar, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
-              <%= link_to arts_path do %>
+              <%= link_to uploaded_arts_path do %>
                 <%= image_tag("/assets/photo-camera.svg", class: "custom_icon") %>  <%= t(".uploaded_art", default: "Art I've Uploaded") %>
               <% end %>
             </li>
             <li>
-              <%= link_to arts_path do %>
+              <%= link_to mine_arts_path do %>
                 <%= image_tag("/assets/spray.svg", class: "custom_icon") %>  <%= t(".my_street-art", default: "My Street Art") %>
               <% end %>
             </li>

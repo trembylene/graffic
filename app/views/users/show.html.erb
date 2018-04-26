@@ -38,12 +38,14 @@
             <p>Hearted Art</p>
           </a>
         </li>
+        <% if policy(@user).street_artist? %>
         <li role="presentation" class="tab street-art-tab">
           <a href="#my-street-art" aria-controls="my-street-art" role="tab" data-toggle="tab">
             <h2>23</h2>
             <p>My Street Art</p>
           </a>
         </li>
+        <% end %>
         <li role="presentation" class="tab">
           <a href="#uploaded-art" aria-controls="uploaded-art uploaded-tab" role="tab" data-toggle="tab">
             <h2>23</h2>
@@ -58,7 +60,7 @@
           <p>placeholder hearted art card</p>
           <p>placeholder hearted art card</p>
         </div>
-        <% if @user.type == "StreetArtist" %>
+        <% if policy(@user).street_artist? %>
           <div role="tabpanel" class="tab-pane" id="my-street-art">
             <!-- Tab 2: My Street Art (if street artist) -->
             <%= render '/shared/cards_my_street_art' %>
@@ -66,9 +68,8 @@
         <% end %>
           <div role="tabpanel" class="tab-pane" id="uploaded-art">
           <!-- Tab 4: Uploaded Art -->
-          <p>placeholder uploaded art card</p>
-          <p>placeholder uploaded art card</p>
-        </div>
+            <%= render '/shared/cards_uploaded_art' %>
+          </div>
       </div>
       </div>
     </div>

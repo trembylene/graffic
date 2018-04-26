@@ -5,6 +5,13 @@ Rails.application.routes.draw do
   resources :arts, except: [:destroy], :path => "street_art" do
     collection do
       get 'search'
+      get 'mine'
+      get 'uploaded'
+    end
+    member do
+      get 'like'
+      get 'unlike'
+      patch 'claim'
     end
     resources :supporters, only: [:create, :destroy]
   end

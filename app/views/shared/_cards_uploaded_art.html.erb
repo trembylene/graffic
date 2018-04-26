@@ -1,7 +1,8 @@
 <div class="index-cards">
   <div class="container">
       <div class="row">
-      <% @user.creations.each do |art| %>
+      <% @arts.each do |art| %>
+      <% if @user.id == art.user_id %>
         <div class="col-xs-12 col-sm-6 col-lg-4">
           <div class="card">
             <div class="card-header">
@@ -24,6 +25,7 @@
             <%= link_to "", art_path(art), class: "card-link"  %>
           </div>
         </div>
+      <% end %>
       <% end %>
       </div>
   </div>
