@@ -7,3 +7,11 @@
 .banner {
   background: center;
 }
+
+a {
+  color: #616668;
+  &:hover {
+    color: #4AB8A1;
+    text-decoration: none;
+  }
+}
