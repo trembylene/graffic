@@ -1,0 +1,88 @@
+.footer {
+  background-color: #2a2627;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 50px;
+  color: white;
+  margin-top: 6vh;
+}
+
+.footer-info {
+  max-width: 600px;
+  color: rgba(255,255,255,0.8);
+}
+
+.footer-about {
+  color: rgba(255,255,255,0.8);
+  #heart {
+    color: $crimson;
+  }
+  .footer-connect {
+    a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      font-family: $body-font;
+      &:hover {
+        opacity: 1;
+      }
+      i {
+        padding-right: 5px;
+        padding-left: 2px;
+      }
+    }
+  }
+}
+
+.footer .fa-heart {
+  color: #D23333;
+}
+
+
+// SMALL DEVICES
+@media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */
+.footer-info {
+  padding: 30px 10px 20px 10px;
+}
+
+.footer-about {
+  padding: 30px 10px;
+  float: left;
+  border-top: 1px solid rgba(234,0,63,0.6);
+  .footer-connect {
+    float: center;
+    text-align: center;
+  }
+}
+
+}
+
+// MEDIUM DEVICES
+@media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+.footer {
+  height: 27vh;
+}
+
+.footer-info {
+  padding: 0px 20px 0px 0px;
+  float: right;
+}
+
+.footer-about {
+  border-top: none;
+  border-left: 1px solid rgba(234,0,63,0.6);
+  margin-top: 35px;
+  padding: 0px 0px 0px 20px;
+  .footer-connect {
+    float: left;
+    text-align: left;
+  }
+}
+}
+
+// LARGE DEVICES
+@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */
+.footer-about {
+  margin-top: 13px;
+}
+}
