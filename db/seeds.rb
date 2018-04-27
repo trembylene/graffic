@@ -14,9 +14,9 @@ art = Art.new(
   tags: "colourful",
   user_id: 1,
   )
+art.save!
 art.liked_by User.find(1)
 art.liked_by User.find(3)
-art.save!
 
 art = Art.new(
   photo: open("https://res.cloudinary.com/trembylene/image/upload/v1524553461/graffiti2-min.png"),
@@ -28,9 +28,9 @@ art = Art.new(
   tags: "colourful",
   user_id: 1,
   )
+art.save!
 art.liked_by User.find(1)
 art.liked_by User.find(3)
-art.save!
 
 art = Art.new(
   photo: open("https://res.cloudinary.com/trembylene/image/upload/v1524553461/graffiti3-min.png"),
@@ -42,9 +42,8 @@ art = Art.new(
   tags: "urban",
   user_id: 1,
   )
-art.liked_by User.find(1)
-art.liked_by User.find(3)
 art.save!
+art.liked_by User.find(1)
 
 art = Art.new(
   photo: open("https://res.cloudinary.com/trembylene/image/upload/v1524553461/graffiti5-min.png"),
@@ -56,9 +55,9 @@ art = Art.new(
   tags: "urban",
   user_id: 1,
   )
+art.save!
 art.liked_by User.find(1)
 art.liked_by User.find(3)
-art.save!
 
 art = Art.new(
   photo: open("https://res.cloudinary.com/trembylene/image/upload/v1524553461/graffiti4-min.png"),
@@ -70,10 +69,6 @@ art = Art.new(
   tags: "tentacle",
   user_id: 1,
   )
-art.liked_by User.find(1)
-art.liked_by User.find(3)
 art.save!
-
-
 
 puts "Finished! You now have art!"

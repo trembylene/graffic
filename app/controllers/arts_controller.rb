@@ -55,6 +55,10 @@ class ArtsController < ApplicationController
 
   def show
     authorize @art
+    if @art.artist
+      @artist = User.find(@art.artist_id)
+    end
+    @user = User.find(@art.user_id)
     @markers = [{
       lat: @art.latitude,
       lng: @art.longitude,
