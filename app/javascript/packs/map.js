@@ -24,6 +24,11 @@ const mapElement = document.getElementById('map');
 if (mapElement) { // don't try to build a map if there's no div#map to inject in
   const map = new GMaps({ el: '#map', lat: 0, lng: 0 });
   const markers = JSON.parse(mapElement.dataset.markers);
+  if (markers.length === 1) {
+    map.addMarkers(markers);
+  } else {
+    map.addMarkers(markers);
+  }
   addMarkersToMap(markers, map)
   if (markers.length === 0) {
     map.setZoom(2);

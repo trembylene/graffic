@@ -55,14 +55,14 @@ class ArtsController < ApplicationController
 
   def show
     authorize @art
-    @markers = {
+    @markers = [{
       lat: @art.latitude,
       lng: @art.longitude,
       id: @art.id,
       infoWindow: {
-        content: "<a href='#{@art.id}'><img src='#{@art.photo}' class='photo_markers' /><strong>#{@art.title}</strong><br>"
+        content: "<a href='#{@art.id}' id='@art_#{@art.id}'><strong>#{@art.title}</strong><br>"
       }
-    }
+    }]
   end
 
   def edit
