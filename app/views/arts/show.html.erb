@@ -30,15 +30,10 @@
           <div><%= cl_image_tag @art.user.avatar, class: "avatar-large avatar-profile" %></div>
         </div>
         <div>
-          <% if policy(@art).claim? %>
+          <% if current_user && policy(@art).claim? %>
             <p>Did you create this street art? Claim it here!</p>
             <%= link_to "Claim Art", claim_art_path(@art), class: 'btn btn-success', method: :patch %>
           <% end %>
-
-
-
-
-
 
           <h4><%= @art.description %></h4>
           <br>
@@ -51,54 +46,13 @@
   </div>
   <hr>
 
-  <!-- Comments - Will be changed soon with JS -->
-  <div class="comment">
-    <span><img class="avatar-small" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan"></span>
-    <div class="comment-name">
-      <h3>Gab Dehan</h3>
-      <p>22/04/18</p>
-    </div>
-    <div class="comment-body">
-      <p><strong>Congrats! Loved!</strong></p>
-      <p>
-        “It is a place where East and West, past and present co-exist and collide. ‘Old Town Central’ is an evergreen promotion programme and new elements will be added to it in the future.”
-      </p>
-    </div>
-  </div>
-
-  <div class="comment">
-    <span><img class="avatar-small" src="https://kitt.lewagon.com/placeholder/users/ssaunier"></span>
-    <div class="comment-name">
-      <h3>John Boavida</h3>
-      <p>10/02/18</p>
-    </div>
-    <div class="comment-body">
-      <p><strong>So impressive!</strong></p>
-      <p>
-        I am not sure yet! I might be in Shanghai at this moment... Can I tell you later?
-      </p>
-    </div>
-  </div>
-
-  <div class="comment">
-    <span><img class="avatar-small" src="https://kitt.lewagon.com/placeholder/users/eschults"></span>
-    <div class="comment-name">
-      <h3>Jack Loko</h3>
-      <p>10/02/18</p>
-    </div>
-    <div class="comment-body">
-      <p><strong>Amazing art!</strong></p>
-      <p>
-        Lorem ipsum dolor sit amet, ignota urbanitas prodesset ea eam, et vis illum principes intellegam. Ea sit pertinax sententiae, eum at meis mundi ridens, no mel adhuc ridens omnium. Et constituto mediocritatem eum, oblique omnesque definitionem id cum. Iriure appetere delicata et his.
-      </p>
-    </div>
-  </div>
-
-
   <!-- Map / Location -->
   <div class="row">
     <div class="col-xs-12 col-lg-6">
-      <div id="map" style="width: 80%; height: 350px;">
+      <div
+        id="map"
+        data-markers="<%= @markers.to_json %>"
+        style="width: 100%; height: 350px;>
       </div>
     </div>
   </div>
