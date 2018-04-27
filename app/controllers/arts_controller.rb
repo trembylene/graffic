@@ -97,11 +97,15 @@ class ArtsController < ApplicationController
   end
 
   def mine
-    @arts = policy_scope(Art.where(artist_id: current_user.id))
+    @arts = policy_scope(Art).where(artist: current_user)
   end
 
   def uploaded
-    @arts = policy_scope(Art.where(user_id: current_user.id))
+    @arts = policy_scope(Art).where(user: @user)
+  end
+
+  def hearted
+    @arts = current_user.votes.up.votables
   end
 
   private

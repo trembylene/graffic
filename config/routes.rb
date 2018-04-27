@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       get 'search'
       get 'mine'
       get 'uploaded'
+      get 'hearted'
     end
     member do
       get 'like'

@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
   include Pundit
 
-  after_action :verify_authorized, except: [:index, :search, :mine, :uploaded], unless: :skip_pundit?
+  after_action :verify_authorized, except: [:index, :search, :mine, :uploaded, :hearted], unless: :skip_pundit?
   after_action :verify_policy_scoped, only: [:index, :search, :mine, :uploaded], unless: :skip_pundit?
 
   def configure_permitted_parameters
