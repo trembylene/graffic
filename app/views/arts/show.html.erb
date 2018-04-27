@@ -39,7 +39,14 @@
           <br>
           <h4><em>Details</em></h4>
           <p><strong>Location:</strong> <%= @art.location %></p>
-          <p><strong>Artist:</strong> <%= @art.artist_id %></p>
+          <p><strong>Artist:</strong>
+            <% if @art.artist %>
+              <%= link_to "#{@artist.alias}", user_path(@artist) %>
+            <% else %>
+              -
+            <% end %>
+          </p>
+          <p><strong>Uploaded by:</strong> <%= link_to "#{@user.alias}", user_path(@user) %></p>
         </div>
       </div>
     </div>
