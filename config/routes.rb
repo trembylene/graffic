@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       get 'like'
       get 'unlike'
       patch 'claim'
+      put 'claim'
       get 'claim'
     end
     resources :supporters, only: [:create, :destroy]
