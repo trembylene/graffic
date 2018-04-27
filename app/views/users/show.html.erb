@@ -41,14 +41,14 @@
         <% if @user.street_artist? %>
         <li role="presentation" class="tab street-art-tab">
           <a href="#my-street-art" aria-controls="my-street-art" role="tab" data-toggle="tab">
-            <h2>23</h2>
+            <h2> <%= @my_arts.count %> </h2>
             <p>My Street Art</p>
           </a>
         </li>
         <% end %>
         <li role="presentation" class="tab">
           <a href="#uploaded-art" aria-controls="uploaded-art uploaded-tab" role="tab" data-toggle="tab">
-            <h2>23</h2>
+            <h2><%= @uploaded_arts.count %></h2>
             <p>Uploaded Art</p>
           </a>
         </li>
@@ -57,20 +57,44 @@
       <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="hearted-art">
           <!-- Tab 3: Hearted Art -->
-          <p>placeholder hearted art card</p>
+          <div class="index-cards">
+            <div class="container">
+              <div class="row">
+                <% @hearted_arts.each do |art| %>
+                  <%= render '/shared/cards', art: art %>
+                <% end %>
+              </div>
+            </div>
+          </div>
           <p>placeholder hearted art card</p>
         </div>
         <% if @user.street_artist? %>
           <div role="tabpanel" class="tab-pane" id="my-street-art">
             <!-- Tab 2: My Street Art (if street artist) -->
-            <%= render '/shared/cards_my_street_art' %>
+            <div class="index-cards">
+              <div class="container">
+                <div class="row">
+                  <% @my_arts.each do |art| %>
+                    <%= render '/shared/cards', art: art %>
+                  <% end %>
+                </div>
+              </div>
+            </div>
           </div>
         <% end %>
           <div role="tabpanel" class="tab-pane" id="uploaded-art">
           <!-- Tab 4: Uploaded Art -->
-            <%= render '/shared/cards_uploaded_art' %>
+            <div class="index-cards">
+              <div class="container">
+                <div class="row">
+                  <% @uploaded_arts.each do |art| %>
+                    <%= render '/shared/cards', art: art %>
+                  <% end %>
+                </div>
+              </div>
+            </div>
           </div>
-      </div>
+        </div>
       </div>
     </div>
   </div>

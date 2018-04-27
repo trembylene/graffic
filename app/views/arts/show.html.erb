@@ -13,8 +13,8 @@
       <div class="art-body">
         <div class="art-body-show">
           <ul class="list-inline">
-            <li><h3>
-              <%= @art.title %>
+            <li><h3><%= @art.title %></h3></li>
+            <li>
               <% if @art.user == current_user %>
                 <small class="title-icons">
                   <%= link_to "", edit_art_path(@art), :class => "fa fa-pencil fa-lg" %>
@@ -24,10 +24,12 @@
                     data: { confirm: "Are you sure?" } %>
                 </small>
               <% end %>
-            </h3></li>
+            </li>
             <li><%= render "like" %></li>
           </ul>
-          <div><%= cl_image_tag @art.user.avatar, class: "avatar-large avatar-profile" %></div>
+          <div class="avatar-large avatar-profile" style="background-image: url(<%= @art.user.avatar %>);">
+            <%= link_to "", user_path(@art.user), class: "card-link"  %>
+          </div>
         </div>
         <div>
           <% if current_user && policy(@art).claim? %>
