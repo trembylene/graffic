@@ -32,7 +32,7 @@
         <div>
           <% if current_user && policy(@art).claim? %>
             <p>Did you create this street art? Claim it here!</p>
-            <%= link_to "Claim Art", claim_art_path(@art), class: 'btn btn-success', method: :patch %>
+            <%= link_to "Claim Art", claim_art_path(@art), class: 'btn btn-success', method: :put %>
           <% end %>
 
           <h4><%= @art.description %></h4>

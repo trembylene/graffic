@@ -14,6 +14,8 @@ art = Art.new(
   tags: "colourful",
   user_id: 1,
   )
+art.liked_by User.find(1)
+art.liked_by User.find(3)
 art.save!
 
 art = Art.new(
@@ -26,6 +28,8 @@ art = Art.new(
   tags: "colourful",
   user_id: 1,
   )
+art.liked_by User.find(1)
+art.liked_by User.find(3)
 art.save!
 
 art = Art.new(
@@ -38,6 +42,8 @@ art = Art.new(
   tags: "urban",
   user_id: 1,
   )
+art.liked_by User.find(1)
+art.liked_by User.find(3)
 art.save!
 
 art = Art.new(
@@ -50,6 +56,8 @@ art = Art.new(
   tags: "urban",
   user_id: 1,
   )
+art.liked_by User.find(1)
+art.liked_by User.find(3)
 art.save!
 
 art = Art.new(
@@ -62,6 +70,10 @@ art = Art.new(
   tags: "tentacle",
   user_id: 1,
   )
+art.liked_by User.find(1)
+art.liked_by User.find(3)
 art.save!
+
+
 
 puts "Finished! You now have art!"

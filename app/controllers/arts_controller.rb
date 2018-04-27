@@ -82,7 +82,7 @@ class ArtsController < ApplicationController
   def like
     current_user.toggle_like(@art)
     respond_to do |format|
-      format.html { redirect_to :back }
+      format.html { redirect_to art_path(@art) }
       format.js
     end
   end

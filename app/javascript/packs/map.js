@@ -5,7 +5,6 @@ function mouseOverMarker(markerId) {
 }
 
 function addMarkersToMap(markers, map) {
-  console.log(markers);
   markers.forEach(function(marker) {
     map.addMarker(
       Object.assign(marker, {map: map,
