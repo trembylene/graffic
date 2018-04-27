@@ -4,5 +4,3 @@
    <%= link_to "", user_session_path, id: "like_#{@art.id}", class: "glyphicon glyphicon-heart" %>
 <% end %>
 <li id="likes"><%= @art.get_likes.size %></li>
-
-<li><%= image_tag("/assets/heart.svg", class: "custom_icon-large") %> 45</li>
