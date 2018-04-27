@@ -30,7 +30,7 @@ class ArtsController < ApplicationController
         lng: art.longitude,
         id: art.id,
         infoWindow: {
-          content: "<a href='#{art.id}'><img src='#{art.photo}' class='photo_markers' /><strong>#{art.title}</strong><br>"
+          content: "<a href='#{art.id}' id='art_#{art.id}'><strong>#{art.title}</strong><br>"
         }
       }
     end
@@ -55,14 +55,14 @@ class ArtsController < ApplicationController
 
   def show
     authorize @art
-    @markers = {
+    @markers = [{
       lat: @art.latitude,
       lng: @art.longitude,
       id: @art.id,
       infoWindow: {
-        content: "<a href='#{@art.id}'><img src='#{@art.photo}' class='photo_markers' /><strong>#{@art.title}</strong><br>"
+        content: "<a href='#{@art.id}' id='@art_#{@art.id}'><strong>#{@art.title}</strong><br>"
       }
-    }
+    }]
   end
 
   def edit
@@ -82,7 +82,7 @@ class ArtsController < ApplicationController
   def like
     current_user.toggle_like(@art)
     respond_to do |format|
-      format.html { redirect_to :back }
+      format.html { redirect_to art_path(@art) }
       format.js
     end
   end
