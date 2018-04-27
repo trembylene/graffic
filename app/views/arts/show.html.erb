@@ -25,9 +25,11 @@
             </li>
             <li><%= render "like" %></li>
           </ul>
-          <div class="avatar-large avatar-profile" style="background-image: url(<%= @art.user.avatar %>);">
-            <%= link_to "", user_path(@art.user), class: "card-link"  %>
-          </div>
+          <% if @art.artist %>
+            <div class="avatar-large avatar-profile" style="background-image: url(<%= @art.artist.avatar %>);">
+              <%= link_to "", user_path(@art.artist), class: "card-link"  %>
+            </div>
+          <% end %>
         </div>
         <div>
           <% if current_user && policy(@art).claim? %>

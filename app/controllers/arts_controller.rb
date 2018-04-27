@@ -101,7 +101,7 @@ class ArtsController < ApplicationController
   end
 
   def uploaded
-    @arts = policy_scope(Art).where(user: @user)
+    @arts = policy_scope(Art).where(user: current_user)
   end
 
   def hearted
