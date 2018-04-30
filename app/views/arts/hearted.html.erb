@@ -34,6 +34,13 @@
                 </div>
               <% end %>
             </div>
+
+            <% if @arts.length > 0 %>
+              <div
+              id="map"
+              data-markers="<%= @markers.to_json %>"
+            ></div>
+            <% end %>
           </div>
         </div>
       </div>
