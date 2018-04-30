@@ -34,7 +34,11 @@
         <div>
           <% if policy(@art).claim? %>
             <p>Did you create this street art? Claim it here!</p>
-            <%= link_to "Claim Art", claim_art_path(@art), class: 'btn btn-success', method: :put %>
+            <% if current_user %>
+              <%= link_to "Claim Art", claim_art_path(@art), class: 'btn btn-success', method: :put %>
+            <% else %>
+              <%= link_to t(".sign_in", default: "Claim Art"), "#", class: 'btn btn-success', data: {toggle: "modal", target: "#login-modal"} %>
+            <% end %>
           <% end %>
 
           <h4><%= @art.description %></h4>
