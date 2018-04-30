@@ -20,7 +20,7 @@
                   <%= art.get_likes.size %>
                 </div>
               </div>
-              <p class="card-description">First five words of description...</p>
+              <p class="card-description"><%= art.location %></p>
               <div class="read-more">
                 <%= link_to "Read More", art_path(art) %>
               </div>
