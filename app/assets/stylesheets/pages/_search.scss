@@ -30,4 +30,5 @@
 
 .main-container {
   display: flex;
+  min-height: calc(100vh - 70px - 106.5px - 27vh - 6vh);
 }
