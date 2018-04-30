@@ -29,6 +29,9 @@
             <div class="avatar-large avatar-profile" style="background-image: url(<%= @art.artist.avatar %>);">
               <%= link_to "", user_path(@art.artist), class: "card-link"  %>
             </div>
+          <% else %>
+            <div class="avatar-large avatar-profile" style="background-image: url('http://res.cloudinary.com/trembylene/image/upload/v1525077075/cvo0htpam8nqz4jf6if0.png')">
+            </div>
           <% end %>
         </div>
         <div>
