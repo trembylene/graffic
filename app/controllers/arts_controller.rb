@@ -64,7 +64,7 @@ class ArtsController < ApplicationController
       lng: @art.longitude,
       id: @art.id,
       infoWindow: {
-        content: "<a href='#{@art.id}' id='@art_#{@art.id}'><strong>#{@art.title}</strong><br>"
+        content: "<a href='https://www.google.com/maps/search/?api=1&query=#{@art.location}' target='_blank'><strong>#{@art.location}</strong><br>"
       }
     }]
   end
