@@ -48,6 +48,10 @@ h2 {
   padding-bottom: 20px;
 }
 
+.tab-content {
+  min-height: 20vh;
+}
+
 .tabs {
   display: flex;
   justify-content: space-between;
@@ -95,6 +99,15 @@ h2 {
   padding-bottom: 20px;
   .active {
   background-color: white !important;
+  }
+}
+
+.empty-tab {
+  padding-top: 50px;
+  text-align: center;
+  a {
+    padding: 8px 13px;
+    border-radius: 2px;
   }
 }
 

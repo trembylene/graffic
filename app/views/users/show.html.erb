@@ -63,6 +63,12 @@
                 <% @hearted_arts.each do |art| %>
                   <%= render '/shared/cards', art: art %>
                 <% end %>
+                <% if @hearted_arts.count == 0 %>
+                  <div class="empty-tab">
+                    <p>You haven't hearted any street art yet</p>
+                    <%= link_to "Explore Street Art", arts_path, class: "btn, btn-danger text-center" %>
+                  </div>
+                <% end %>
               </div>
             </div>
           </div>
@@ -76,6 +82,12 @@
                   <% @my_arts.each do |art| %>
                     <%= render '/shared/cards', art: art %>
                   <% end %>
+                  <% if @my_arts.count == 0 %>
+                  <div class="empty-tab">
+                    <p>You haven't claimed any street art yet</p>
+                    <%= link_to "Explore Street Art", arts_path, class: "btn, btn-danger text-center" %>
+                  </div>
+                <% end %>
                 </div>
               </div>
             </div>
@@ -89,6 +101,12 @@
                   <% @uploaded_arts.each do |art| %>
                     <%= render '/shared/cards', art: art %>
                   <% end %>
+                  <% if @uploaded_arts.count == 0 %>
+                  <div class="empty-tab">
+                    <p>You haven't uploaded any street art yet</p>
+                    <%= link_to "Upload Street Art", new_art_path, class: "btn, btn-danger text-center" %>
+                  </div>
+                <% end %>
                 </div>
               </div>
             </div>
