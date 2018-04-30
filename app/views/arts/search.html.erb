@@ -1,7 +1,7 @@
 <div class="search-bar">
   <div class="search-results">
     <% if @arts.blank? %>
-      <h2>No matches for <%= params[:search] %>.</h2>
+      <h2>No matches for <%= params[:search_location] %>.</h2>
     <% else %>
       <h2>Search Results (<%= @arts.length %>)</h2>
     <% end %>
@@ -35,6 +35,7 @@
 </div>
 <div class="main-container">
   <div class="container">
+    <% if @arts.length > 0 %>
     <div class="card-container">
       <div class="row">
           <% @arts.each do |art| %>
@@ -43,8 +44,6 @@
       </div>
     </div>
   </div>
-
-  <% if @arts.length > 0 %>
     <div
     id="map"
     data-markers="<%= @markers.to_json %>"
