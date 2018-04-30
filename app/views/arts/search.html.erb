@@ -34,19 +34,19 @@
   </div>
 </div>
 <div class="main-container">
-  <div class="container">
-    <% if @arts.length > 0 %>
-    <div class="card-container">
-      <div class="row">
-          <% @arts.each do |art| %>
-            <%= render "card_deck", art:art %>
-          <% end %>
+  <% if @arts.length > 0 %>
+    <div class="container">
+      <div class="card-container">
+        <div class="row">
+            <% @arts.each do |art| %>
+              <%= render "card_deck", art:art %>
+            <% end %>
+        </div>
       </div>
     </div>
-  </div>
-    <div
-    id="map"
-    data-markers="<%= @markers.to_json %>"
-  ></div>
+      <div
+      id="map"
+      data-markers="<%= @markers.to_json %>"
+    ></div>
   <% end %>
 </div>

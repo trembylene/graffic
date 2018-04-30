@@ -35,7 +35,6 @@ class ArtPolicy < ApplicationPolicy
   end
 
   def claim?
-    # update?
-    record.artist_id == nil && user.type == "StreetArtist"
+    record.artist_id == nil
   end
 end
