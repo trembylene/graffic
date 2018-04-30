@@ -18,7 +18,7 @@ class Art < ApplicationRecord
             .select('arts.*, COUNT(votes.id) AS votes_count')
             .group('arts.id')
             .having('COUNT(votes.id) > 0')
-            .order('votes_count DESC')
+            .reorder('votes_count DESC')
   }
 
   def self.search(search)

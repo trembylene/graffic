@@ -33,18 +33,21 @@
     </ul>
   </div>
 </div>
-
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-8">
-        <%= render "card_deck" %>
-    </div>
-    <div class="col-xs-12 col-sm-4">
-      <% if @arts.length > 0 %>
-        <%= render "map" %>
-      <% end %>
+<div class="main-container">
+  <div class="container">
+    <div class="card-container">
+      <div class="row">
+          <% @arts.each do |art| %>
+            <%= render "card_deck", art:art %>
+          <% end %>
+      </div>
     </div>
   </div>
+
+  <% if @arts.length > 0 %>
+    <div
+    id="map"
+    data-markers="<%= @markers.to_json %>"
+  ></div>
+  <% end %>
 </div>
-
-
