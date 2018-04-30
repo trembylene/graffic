@@ -1,6 +1,6 @@
 <% if current_user %>
   <%= link_to "", like_art_path(@art.id), id: "like_#{@art.id}", class: "glyphicon glyphicon-heart#{current_user.liked?(@art) ? '' : '-empty'}", remote: true %>
 <% else %>
-   <%= link_to "", user_session_path, id: "like_#{@art.id}", class: "glyphicon glyphicon-heart" %>
+  <%= link_to t(".sign_in", default: ""), "#", class: "glyphicon glyphicon-heart", data: {toggle: "modal", target: "#login-modal"} %>
 <% end %>
 <li id="likes"><%= @art.get_likes.size %></li>
