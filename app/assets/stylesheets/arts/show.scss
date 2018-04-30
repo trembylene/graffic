@@ -16,11 +16,18 @@
 a {
   color: #616668;
   &:hover {
-    color: #4AB8A1;
+    // color: #4AB8A1;
     text-decoration: none;
   }
 }
 
 h2 {
   font-size: 40px;
+}
+
+.link {
+  text-decoration: underline;
+  &:hover {
+    color: #DC143C;
+  }
 }

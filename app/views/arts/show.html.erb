@@ -40,15 +40,15 @@
           <h4><%= @art.description %></h4>
           <br>
           <h4><em>Details</em></h4>
-          <p><strong>Location:</strong><%= link_to @art.location, "https://www.google.com/maps/search/?api=1&query=#{@art.location}", target: :_blank %></p>
+          <p><strong>Location:</strong> <%= link_to @art.location, "https://www.google.com/maps/search/?api=1&query=#{@art.location}", target: :_blank, class: "link" %></p>
           <p><strong>Artist:</strong>
             <% if @art.artist %>
-              <%= link_to "#{@artist.alias}", user_path(@artist) %>
+              <%= link_to "#{@artist.alias}", user_path(@artist), class: "link" %>
             <% else %>
               -
             <% end %>
           </p>
-          <p><strong>Uploaded by:</strong> <%= link_to "#{@user.alias}", user_path(@user) %></p>
+          <p><strong>Uploaded by:</strong> <%= link_to "#{@user.alias}", user_path(@user), class: "link" %></p>
         </div>
       </div>
     </div>
