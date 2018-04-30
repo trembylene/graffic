@@ -31,6 +31,7 @@
 
 .card-header {
   margin-top: 15px;
+  min-height: 48px;
   width: 280px;
   text-align: left;
   .card-title {
@@ -60,7 +61,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 15px;
+    padding: 0px 15px 15px 15px;
+    .avatar {
+      margin-top: -40px;
+    }
   }
   .card-description {
     color: gray;
