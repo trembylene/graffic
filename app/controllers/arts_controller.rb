@@ -8,9 +8,9 @@ class ArtsController < ApplicationController
 
   def search
     if !params[:search_location]
-      redirect_to root_path
+      redirect_to arts_path
     elsif params[:search_location].empty?
-      redirect_to root_path
+      redirect_to arts_path
     else
       @arts = policy_scope(Art.near(params[:search_location], 50).order("distance"))
     end
