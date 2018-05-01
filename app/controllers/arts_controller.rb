@@ -108,6 +108,16 @@ class ArtsController < ApplicationController
 
   def hearted
     @arts = current_user.votes.up.votables
+    @markers = @arts.map do |art|
+      {
+        lat: art.latitude,
+        lng: art.longitude,
+        id: art.id,
+        infoWindow: {
+          content: "<a href='#{art.id}' id='art_#{art.id}'><strong>#{art.title}</strong><br>"
+        }
+      }
+    end
   end
 
   private
