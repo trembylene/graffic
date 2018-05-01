@@ -38,6 +38,12 @@
 
 .unhappy-account {
   margin-top: 50px;
+  p {
+    text-decoration: underline;
+    a:hover {
+      color: $crimson;
+    }
+  }
 }
 
 .forms {
