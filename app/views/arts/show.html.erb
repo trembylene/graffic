@@ -80,7 +80,7 @@
             <%= render 'comments/show', comment: comment %>
           <% end %>
         <% end %>
-        <%= render 'comments/form', art: @art, comment: @comment %>
+        <%= render 'comments/form', user: current_user, art: @art, comment: @comment %>
       </div>
     </div>
   </div>

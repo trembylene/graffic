@@ -3,6 +3,7 @@ class CommentsController < ApplicationController
     @art = Art.find(params[:art_id])
     authorize @art
     @comment = Comment.new(comment_params)
+    @comment.user = current_user
     @comment.art = @art
     if @comment.save
       redirect_to art_path(@art)
