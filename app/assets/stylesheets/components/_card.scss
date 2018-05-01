@@ -63,13 +63,14 @@
     align-items: center;
     padding: 0px 15px 15px 15px;
     .avatar {
-      margin-top: -40px;
+      margin-top: -26px;
     }
   }
   .card-description {
     color: gray;
     margin: 0px;
     padding-bottom: 5px;
+    min-height: 50px;
   }
   .read-more a {
     color: $crimson;

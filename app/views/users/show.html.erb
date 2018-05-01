@@ -43,7 +43,7 @@
   <div class="row">
     <div class="col-xs-12">
       <div class="profile-tabs">
-      <ul class="nav nav-tabs tabs" role="tablist">
+      <ul class="nav nav-tabs tabs flex-container" role="tablist">
         <li role="presentation" class="active tab hearted-tab">
           <a href="#hearted-art" aria-controls="hearted-art" role="tab" data-toggle="tab">
             <h2><%= @user.votes.up.votables.size %></h2>
@@ -58,7 +58,7 @@
           </a>
         </li>
         <% end %>
-        <li role="presentation" class="tab">
+        <li role="presentation" class="tab uploaded-tab">
           <a href="#uploaded-art" aria-controls="uploaded-art uploaded-tab" role="tab" data-toggle="tab">
             <h2><%= @uploaded_arts.count %></h2>
             <p>Uploaded Art</p>
