@@ -69,6 +69,7 @@ class ArtsController < ApplicationController
         content: "<a href='https://www.google.com/maps/search/?api=1&query=#{@art.location}' target='_blank'><strong>#{@art.location}</strong><br>"
       }
     }]
+    @tags = @art.tags.split(" ")
   end
 
   def edit
