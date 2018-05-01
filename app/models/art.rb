@@ -4,6 +4,7 @@ class Art < ApplicationRecord
   belongs_to :user
   belongs_to :artist, class_name: "User", required: false
   has_many :supporters
+  has_many :comments, dependent: :destroy
   mount_uploader :photo, PhotoUploader
   geocoded_by :location
   after_validation :geocode
