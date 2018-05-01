@@ -72,11 +72,19 @@
       </div>
     </div>
     <div class="col-xs-12 col-lg-6">
-      <%= render 'reviews/form', art: @art, comment: @comment %>
+      <div id="comments">
+        <% if @art.comments.blank? %>
+          Be the first to leave a comment!
+        <% else %>
+          <% @art.comments.each do |comment| %>
+            <%= render 'comments/show', comment: comment %>
+          <% end %>
+        <% end %>
+        <%= render 'comments/form', art: @art, comment: @comment %>
+      </div>
     </div>
   </div>
-</div>
-<div class="row">
+  <div class="row">
     <div class="col-xs-12 col-lg-6">
       <div class="tags">
         <% @tags.each do |tag| %>

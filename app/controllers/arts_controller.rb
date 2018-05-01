@@ -67,6 +67,7 @@ class ArtsController < ApplicationController
 
   def show
     authorize @art
+    @comment = Comment.new
     if @art.artist
       @artist = User.find(@art.artist_id)
     end
