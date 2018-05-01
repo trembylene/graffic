@@ -7,10 +7,6 @@
   border-bottom: rgba(0,0,0,0.3);
 }
 
-.search-results {
-  margin-top: 0px;
-}
-
 .search-filters {
   padding-top: 15px;
   a {
@@ -55,6 +51,15 @@
 
 @media (max-width: 700px) {
   #hideable {
+    display: none;
+  }
+  #invisible {
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 700px) {
+  #hidden-filter {
     display: none;
   }
 }

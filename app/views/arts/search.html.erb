@@ -6,7 +6,7 @@
       <div class="results-container">
         <ul class="list-inline">
           <li id="hideable"><h2>Search Results</h2></li>
-          <li><h2>(<%= @arts.length %>)</h2></li>
+          <li  id="invisible"><h2>(<%= @arts.length %>)</h2></li>
         </ul>
       </div>
     <% end %>
@@ -35,6 +35,36 @@
         <% end %>
       </li>
       <% end %>
+    </ul>
+  </div>
+</div>
+<div class="search-bar" id="hidden-filter">
+  <div class="search-results">
+    <% if @arts.blank? %>
+      <h2>No matches for <%= params[:search_location] %>.</h2>
+    <% else %>
+      <div class="results-container">
+        <ul class="list-inline">
+          <li><h3>Search Results</h3></li>
+          <li><h3>(<%= @arts.length %>)</h3></li>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+  <div class="search-filters">
+    <ul class="list-inline">
+      <li><%= form_tag(search_arts_path, :method => "get", id: "popular") do %>
+        <div class="form-group">
+          <%= link_to 'Popular', filter: "popular", search_location: params[:search_location] %>
+        </div>
+        <% end %>
+      </li>
+      <li><%= form_tag(search_arts_path, :method => "get", id: "recent") do %>
+        <div class="form-group">
+          <%= link_to 'Recent', filter: "recent", search_location: params[:search_location] %>
+        </div>
+        <% end %>
+      </li>
     </ul>
   </div>
 </div>
