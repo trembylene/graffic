@@ -72,11 +72,27 @@
       </div>
     </div>
     <div class="col-xs-12 col-lg-6">
-      <div class="tags" style="width: 100%; height: 350px;">
+      <div id="comments">
+        <% if @art.comments.blank? %>
+          Be the first to leave a comment!
+        <% else %>
+          <% @art.comments.each do |comment| %>
+            <%= render 'comments/show', comment: comment %>
+          <% end %>
+        <% end %>
+        <%= render 'comments/form', user: current_user, art: @art, comment: @comment %>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-lg-6">
+      <div class="tags">
         <% @tags.each do |tag| %>
           <%= link_to "##{tag}", {:controller => "arts", action: "index", :search => tag }, class: "btn btn-danger", id: "tag" %>
         <% end %>
       </div>
+    </div>
+    <div class="col-xs-12 col-lg-6">
     </div>
   </div>
 </div>
