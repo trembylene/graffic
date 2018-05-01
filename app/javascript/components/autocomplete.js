@@ -1,7 +1,8 @@
 function autocomplete() {
   document.addEventListener("DOMContentLoaded", function() {
     var artAddress = document.getElementById('art_location');
-    var city = document.getElementById('city_location');
+    var city_bar = document.getElementById('city_location');
+    var city_stack = document.getElementById('city_location_stack');
 
     function onPlaceChanged() {
       var place = this.getPlace();
@@ -19,11 +20,19 @@ function autocomplete() {
       });
     }
 
-    if (city) {
-      var autocomplete = new google.maps.places.Autocomplete(city, { types: [ '(cities)' ] });
-      google.maps.event.addDomListener(city, 'keydown', function(e) {
+    if (city_bar) {
+      var autocomplete = new google.maps.places.Autocomplete(city_bar, { types: [ '(cities)' ] });
+      google.maps.event.addDomListener(city_bar, 'keydown', function(e) {
         if (e.key === "Enter") {
           document.getElementById('search-location').submit();
+        }
+      });
+    }
+    if (city_stack) {
+      var autocomplete = new google.maps.places.Autocomplete(city_stack, { types: [ '(cities)' ] });
+      google.maps.event.addDomListener(city_stack, 'keydown', function(e) {
+        if (e.key === "Enter") {
+          document.getElementById('search-location-stack').submit();
         }
       });
     }
