@@ -20,7 +20,11 @@
         <% end %>
       </div>
       <% if @user.info %>
-        <p class="info"><%= @user.info %></p>
+        <% if (@user.info.split(" ")).count > 6 %>
+          <p class="info"><%= @user.info %></p>
+        <% else %>
+          <p class="info" id="centered-mobile"><%= @user.info %></p>
+        <% end %>
       <% end %>
       </div>
     </div>
