@@ -78,7 +78,7 @@
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
         <li>
           <%= form_tag(search_arts_path, :method => "get", id: "search-form", class: "navbar-wagon-item navbar-wagon-link", type:"search") do %>
-            <%= text_field_tag :search, params[:search], placeholder: "Search" %>
+            <%= text_field_tag :search_location, params[:search_location], placeholder: "Search by city", id: "city_location"%>
           <% end %>
         </li>
         <li>
@@ -133,7 +133,7 @@
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
               <%= form_tag(search_arts_path, :method => "get", id: "search-form", class: "navbar-wagon-item navbar-wagon-link", type:"search") do %>
-                <%= text_field_tag :search, params[:search], placeholder: "Search" %>
+                <%= text_field_tag :search_location, params[:search_location], placeholder: "Search by city", id: "city_location"%>
               <% end %>
             </li>
             <li>

@@ -1,7 +1,8 @@
 function autocomplete() {
   document.addEventListener("DOMContentLoaded", function() {
     var artAddress = document.getElementById('art_location');
-    var city = document.getElementById('city_location');
+    var city = document.querySelectorAll('#city_location');
+    console.log(city);
 
     function onPlaceChanged() {
       var place = this.getPlace();
@@ -23,7 +24,7 @@ function autocomplete() {
       var autocomplete = new google.maps.places.Autocomplete(city, { types: [ '(cities)' ] });
       google.maps.event.addDomListener(city, 'keydown', function(e) {
         if (e.key === "Enter") {
-          document.getElementById('search-location').submit();
+          document.querySelectorAll('#search-location').submit();
         }
       });
     }
