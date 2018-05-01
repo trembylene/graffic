@@ -16,7 +16,7 @@ art = Art.new(
   )
 art.save!
 art.liked_by User.find(1)
-art.liked_by User.find(3)
+art.liked_by User.find(2)
 
 art = Art.new(
   photo: open("https://res.cloudinary.com/trembylene/image/upload/v1524553461/graffiti2-min.png"),
@@ -31,6 +31,7 @@ art = Art.new(
 art.save!
 art.liked_by User.find(1)
 art.liked_by User.find(3)
+art.liked_by User.find(2)
 
 art = Art.new(
   photo: open("https://res.cloudinary.com/trembylene/image/upload/v1524553461/graffiti3-min.png"),
@@ -43,7 +44,8 @@ art = Art.new(
   user_id: 1,
   )
 art.save!
-art.liked_by User.find(1)
+art.liked_by User.find(2)
+art.liked_by User.find(3)
 
 art = Art.new(
   photo: open("https://res.cloudinary.com/trembylene/image/upload/v1524553461/graffiti5-min.png"),
@@ -58,6 +60,7 @@ art = Art.new(
 art.save!
 art.liked_by User.find(1)
 art.liked_by User.find(3)
+art.liked_by User.find(2)
 
 art = Art.new(
   photo: open("https://res.cloudinary.com/trembylene/image/upload/v1524553461/graffiti4-min.png"),
