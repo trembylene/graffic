@@ -74,7 +74,7 @@
     <div class="col-xs-12 col-lg-6">
       <div class="tags" style="width: 100%; height: 350px;">
         <% @tags.each do |tag| %>
-          <%= link_to "##{tag}", arts_path, class: "btn btn-danger", id: "tag"  %>
+          <%= link_to "##{tag}", {:controller => "arts", action: "index", :search => tag }, class: "btn btn-danger", id: "tag" %>
         <% end %>
       </div>
     </div>

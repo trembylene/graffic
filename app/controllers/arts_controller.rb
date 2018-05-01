@@ -4,6 +4,16 @@ class ArtsController < ApplicationController
 
   def index
     @arts = policy_scope(Art).order(created_at: :desc)
+    if params[:filter] == "popular"
+      @arts = policy_scope(@arts.most_voted)
+    elsif params[:filter] == "recent"
+      @arts = policy_scope(@arts.reorder(created_at: :desc))
+    end
+    if params[:search]
+      @arts = policy_scope(@arts.search(params[:search]))
+    else
+      @arts = @arts
+    end
   end
 
   def search
