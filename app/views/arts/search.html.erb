@@ -3,18 +3,23 @@
     <% if @arts.blank? %>
       <h2>No matches for <%= params[:search_location] %>.</h2>
     <% else %>
-      <h2>Search Results (<%= @arts.length %>)</h2>
+      <div class="results-container">
+        <ul class="list-inline">
+          <li id="hideable"><h2>Search Results</h2></li>
+          <li><h2>(<%= @arts.length %>)</h2></li>
+        </ul>
+      </div>
     <% end %>
   </div>
   <div class="search-filters">
     <ul class="list-inline">
-      <li><%= form_tag(search_arts_path, :method => "get", id: "popular") do %>
+      <li id="hideable"><%= form_tag(search_arts_path, :method => "get", id: "popular") do %>
         <div class="form-group">
           <%= link_to 'Popular', filter: "popular", search_location: params[:search_location] %>
         </div>
         <% end %>
       </li>
-      <li><%= form_tag(search_arts_path, :method => "get", id: "recent") do %>
+      <li id="hideable"><%= form_tag(search_arts_path, :method => "get", id: "recent") do %>
         <div class="form-group">
           <%= link_to 'Recent', filter: "recent", search_location: params[:search_location] %>
         </div>
