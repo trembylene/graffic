@@ -12,7 +12,11 @@
     <%= f.input :tags, placeholder: "Add tags to help everyone find this art" %>
     <% if current_user.is_a?(StreetArtist) %>
       <%= simple_fields_for :other do |o| %>
-        <%= o.input :owner, as: :boolean, label: 'This is my creation' %>
+        <%= o.input :owner, as: :boolean, label: 'This is my creation', default: "0" %>
+        <% end %>
+    <% else %>
+      <%= simple_fields_for :other do |o| %>
+        <%= o.hidden_field :owner, as: :boolean, label: 'This is my creation', default: "0" %>
         <% end %>
     <% end %>
   </div>
