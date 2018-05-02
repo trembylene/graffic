@@ -1,5 +1,5 @@
-meta_product_name: "Product Name"
-meta_title: "Product name - Product tagline"
-meta_description: "Relevant description"
-meta_image: "grafficbanner2.jpg"                       # should exist in `app/assets/images/`
+meta_product_name: "Graffic"
+meta_title: "Graffic - Find and share street art"
+meta_description: "Graffic is a web app where you can find and share street art in you local area and worldwide. Our aim is to inspire adventures in the realm of your daily life, and to kindle the creativity that flourishes inside your soul. We celebrate exploration, discovery, and artistic spirit."
+meta_image: "grafficbanner2.jpg"              # should exist in `app/assets/images/`
 twitter_account: "@product_twitter_account"   # required for Twitter Cards
