@@ -7,7 +7,7 @@ function geolocation() {
 
   function success(pos) {
     var crd = pos.coords;
-    var location = document.getElementById("art_location")
+    var location = document.getElementById("art_location");
 
     document.getElementById("locator").remove();
     document.getElementById("art_latitude").setAttribute("value", crd.latitude);
@@ -31,16 +31,18 @@ function geolocation() {
   function geolocate() {
     navigator.geolocation.getCurrentPosition(success, error, options);
   }
-
-  document.getElementById("locator").addEventListener("click", function(event) {
-    event.target.setAttribute('disabled', true);
-    event.target.innerHTML = event.target.getAttribute('data-loading-text');
-    setTimeout(function() {
-      event.target.disabled = false;
-      event.target.setAttribute('value', event.target.getAttribute('data-reset-text'));
-    }, 8000);
-    geolocate();
-  })
+  const locator = document.getElementById("locator");
+  if (locator) {
+    locator.addEventListener("click", function(event) {
+      event.target.setAttribute('disabled', true);
+      event.target.innerHTML = event.target.getAttribute('data-loading-text');
+      setTimeout(function() {
+        event.target.disabled = false;
+        event.target.setAttribute('value', event.target.getAttribute('data-reset-text'));
+      }, 8000);
+      geolocate();
+    })
+  }
 }
 
 export { geolocation };
