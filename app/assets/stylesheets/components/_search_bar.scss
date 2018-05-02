@@ -5,7 +5,6 @@
 }
 
 #index-search {
-  height: 100px;
   h2 {
     padding-top: 3vh !important;
   }
@@ -32,7 +31,7 @@
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 995px) {
   #hideable {
     display: none;
   }
@@ -41,8 +40,24 @@
   }
 }
 
-@media (min-width: 700px) {
+@media (min-width: 995px) {
   #hidden-filter {
     display: none;
+  }
+}
+
+@media (min-width: 620px) {
+  .search-bar {
+    display: flex;
+  }
+}
+
+@media (max-width: 620px) {
+  .search-bar {
+    display: block;
+  }
+  #index-filters {
+    margin-left: 6vh;
+    padding: 0px;
   }
 }
