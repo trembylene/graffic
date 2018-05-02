@@ -17,9 +17,10 @@
 }
 
 @media (min-width:961px) {
-.search-card-height {
-  min-height: 100vh;
-}
+  .search-card-height {
+    min-height: 100vh;
+    flex-direction: row;
+  }
 }
 
 
