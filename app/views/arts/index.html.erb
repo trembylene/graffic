@@ -6,7 +6,13 @@
           <h2 class="page-title">Explore Street Art</h2>
           <%= render 'shared/search_bar' %>
         </div>
-        <%= render '/shared/cards_index' %>
+        <div class="container">
+          <div class="row">
+            <% @arts.each do |art| %>
+              <%= render "/shared/cards", art:art %>
+            <% end %>
+          </div>
+        </div>
       </div>
     </div>
   </div>
