@@ -31,6 +31,7 @@ class ArtsController < ApplicationController
         lat: art.latitude,
         lng: art.longitude,
         id: art.id,
+        icon: "http://res.cloudinary.com/trembylene/image/upload/v1525225292/vvo6mnzdcnsoz7fo8lde.png",
         infoWindow: {
           content: "<a href='#{art.id}' id='art_#{art.id}'><strong>#{art.title}</strong><br>"
         }
@@ -65,6 +66,7 @@ class ArtsController < ApplicationController
       lat: @art.latitude,
       lng: @art.longitude,
       id: @art.id,
+      icon: "http://res.cloudinary.com/trembylene/image/upload/v1525225292/vvo6mnzdcnsoz7fo8lde.png",
       infoWindow: {
         content: "<a href='https://www.google.com/maps/search/?api=1&query=#{@art.location}' target='_blank'><strong>#{@art.location}</strong><br>"
       }
@@ -113,6 +115,7 @@ class ArtsController < ApplicationController
         lat: art.latitude,
         lng: art.longitude,
         id: art.id,
+        icon: "http://res.cloudinary.com/trembylene/image/upload/v1525225292/vvo6mnzdcnsoz7fo8lde.png",
         infoWindow: {
           content: "<a href='#{art.id}' id='art_#{art.id}'><strong>#{art.title}</strong><br>"
         }
