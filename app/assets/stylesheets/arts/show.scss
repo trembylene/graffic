@@ -4,6 +4,10 @@
   justify-content: space-between;
 }
 
+.art-body {
+  padding: 20px;
+}
+
 .banner-content h1 {
   background-color: rgba(0, 0, 0, 0.3);
   padding: 8px 13px;
@@ -11,6 +15,10 @@
 
 .banner {
   background: center;
+}
+
+.map-container {
+  padding: 20px;
 }
 
 a {
@@ -25,11 +33,13 @@ h5 {
   font-size: 40px;
 }
 
+.details {
+  font-style: italic;
+}
+
 .link {
   text-decoration: underline;
-  &:hover {
-    color: #DC143C;
-  }
+  color: $crimson;
 }
 
 .tags {
@@ -42,8 +52,69 @@ h5 {
   margin: 4px 2px 4px 2px;
 }
 
-#comments {
+.comments-container {
   margin-top: 3vh;
   margin-bottom: 2vh;
   padding-left: 30px;
+  #new_comment {
+    margin-left:15px;
+    width: 100%;
+  }
+}
+
+
+.comment-container {
+margin: 5px 0px 5px 0px;
+}
+
+.user-alias p {
+  font-size: 13px;
+  color: #616668;
+}
+
+.comments {
+  max-height: 600px;
+}
+
+.comment-content {
+  margin: 10px 0px 10px 15px;
+  padding: 8px 10px 0.1px 10px;
+  background-color: white;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.comment-user {
+  display: flex;
+  align-items: center;
+}
+
+#map {
+  position: relative !important;
+  top: auto !important;
+  right: auto !important;
+}
+
+.timestamp {
+  margin-left: 20px;
+  p {
+    font-size: 12px;
+    color: #616668;
+  }
+}
+
+#art-title {
+  font-weight: bold;
+  font-size: 36px;
+}
+
+.art-description {
+  font-size: 22px;
+  padding-right: 20px;
+}
+
+.comments-section {
+  display: flex;
+  justify-content: space-between;
+
 }

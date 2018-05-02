@@ -17,7 +17,7 @@ Rails.application.routes.draw do
       get 'claim'
     end
     resources :supporters, only: [:create, :destroy]
-    resources :comments, only: [:create]
+    resources :comments, only: :create
   end
 end
 
