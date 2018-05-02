@@ -62,30 +62,11 @@
 
   <!-- Map / Location -->
   <div class="row">
-    <div class="col-xs-12">
-      <div class="card-container map-container">
-        <div
-          id="map"
-          data-markers="<%= @markers.to_json %>"
-          style="width: 100%; height: 350px;">
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-xs-12">
-      <div class="card-container comments-section">
-        <div id="comments">
-          <% if @art.comments.blank? %>
-            Be the first to leave a comment!
-          <% else %>
-            <% @art.comments.each do |comment| %>
-              <%= render 'comments/show', comment: comment %>
-            <% end %>
-          <% end %>
-          <%= render 'comments/form', user: current_user, art: @art, comment: @comment %>
-        </div>
+    <div class="col-xs-12 col-lg-6">
+      <div
+        id="map"
+        data-markers="<%= @markers.to_json %>"
+        style="width: 100%; height: 350px;">
       </div>
       <div class="tags">
         <% @tags.each do |tag| %>
@@ -95,6 +76,19 @@
     </div>
 
     <div class="col-xs-12 col-lg-6">
+      <div class="comments-container">
+        <% if @art.comments.blank? %>
+          Be the first to leave a comment!
+        <% end %>
+        <%= render 'comments/form', art: @art, comment: @comment %>
+        <div class=" pre-scrollable" id="comments">
+          <% unless @art.comments.blank? %>
+            <% @art.comments.each do |comment| %>
+              <%= render 'comments/show', comment: comment %>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
 </div>
