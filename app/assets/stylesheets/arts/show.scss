@@ -66,6 +66,7 @@ h5 {
 
 .comment-container {
   margin: 5px 0px 5px 0px;
+  transition: all 1.5s ease;
 }
 
 .user-alias p {
@@ -117,5 +118,9 @@ h5 {
 .comments-section {
   display: flex;
   justify-content: space-between;
-
 }
+
+.transition {
+  opacity: 1 !important;
+}
+
