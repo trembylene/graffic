@@ -6,9 +6,15 @@ class CommentsController < ApplicationController
     @comment.user = current_user
     @comment.art = @art
     if @comment.save
-      redirect_to art_path(@art)
+      respond_to do |format|
+        format.html { redirect_to art_path(@art) }
+        format.js  # <-- will render `app/views/comments/create.js.erb`
+      end
     else
-      render 'arts/show'
+      respond_to do |format|
+        format.html { render 'arts/show' }
+        format.js  # <-- idem
+      end
     end
   end
 

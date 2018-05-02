@@ -1,4 +1,4 @@
-<%= simple_form_for([ art, comment ]) do |form| %>
+<%= simple_form_for([ art, comment ], remote: true) do |form| %>
   <%= form.input :content, as: :text, label: false %>
   <%= form.button :submit %>
 <% end %>
