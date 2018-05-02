@@ -1,3 +1,5 @@
+<% content_for :meta_title, "#{@art.title} is on #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_description, @art.description %>
 <div class="text-center"></div>
 <div class="banner" style="background-image: url('<%= @art.photo %>');">
 

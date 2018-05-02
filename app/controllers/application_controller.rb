@@ -17,6 +17,10 @@ class ApplicationController < ActionController::Base
 
   before_action :store_user_location!, if: :storable_location?
 
+  def default_url_options
+    { host: ENV["HOST"] || "localhost:3000" }
+  end
+
   private
    # Its important that the location is NOT stored if:
    # - The request method is not GET (non idempotent)
