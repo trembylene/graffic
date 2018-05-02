@@ -74,7 +74,7 @@
       <div class="card-container search-card-height">
         <div class="row">
             <% @arts.each do |art| %>
-              <%= render "card_deck", art:art %>
+              <%= render "/shared/card_deck", art:art %>
             <% end %>
         </div>
       </div>
