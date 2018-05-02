@@ -6,11 +6,15 @@ function refreshForm(innerHTML) {
 function addComment(commentHTML) {
   const comments = document.getElementById('comments');
   comments.insertAdjacentHTML('afterbegin', commentHTML);
+  function toggle() {
+    document.getElementsByClassName("comment-container")[0].classList.toggle('transition');
+  }
+  setTimeout(toggle, 0);
 }
 
 <% if @comment.errors.any? %>
   refreshForm('<%= j render "comments/form", art: @art, comment: @comment %>');
 <% else %>
-  addComment('<%= j render "comments/show", comment: @comment %>');
+  addComment('<%= j render "comments/new_comment", comment: @comment %>');
   refreshForm('<%= j render "comments/form", art: @art, comment: Comment.new %>');
 <% end %>

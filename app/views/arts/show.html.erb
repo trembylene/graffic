@@ -91,7 +91,7 @@
         <%= render 'comments/form', art: @art, comment: @comment %>
         <div class=" pre-scrollable" id="comments">
           <% unless @art.comments.blank? %>
-            <% @art.comments.each do |comment| %>
+            <% @art.comments.reverse.each do |comment| %>
               <%= render 'comments/show', comment: comment %>
             <% end %>
           <% end %>
