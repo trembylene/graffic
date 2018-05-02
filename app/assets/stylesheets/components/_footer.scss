@@ -52,19 +52,21 @@
 
 .footer-about {
   padding: 30px 10px;
-  float: left;
   border-top: 1px solid rgba(234,0,63,0.6);
   .footer-connect {
     float: center;
     text-align: center;
   }
+  p {
+    text-align: center;
+  }
+}
 }
 
 // MEDIUM DEVICES
 @media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-  .footer {
-    min-height: 27vh;
-  }
+.footer {
+  min-height: 27vh;
 }
 
 .footer-info {
@@ -79,6 +81,9 @@
   padding: 0px 0px 0px 20px;
   .footer-connect {
     float: left;
+    text-align: left;
+  }
+  p {
     text-align: left;
   }
 }
