@@ -1,4 +1,8 @@
 <%= simple_form_for([ art, comment ], remote: true) do |form| %>
   <%= form.input :content, as: :text, label: false %>
-  <%= form.button :submit %>
+  <% if current_user %>
+    <%= form.button :submit %>
+  <% else %>
+    <%= link_to t(".sign_in", default: "Create Comment"), "#", style: "background-color: white; border-radius: 4px;", class: "btn", data: {toggle: "modal", target: "#login-modal"} %>
+  <% end %>
 <% end %>

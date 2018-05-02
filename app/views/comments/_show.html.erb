@@ -4,7 +4,7 @@
     </div>
     <p><%= comment.user.alias %></p>
     <div class="timestamp">
-      <p><%= ((Time.now - comment.created_at) / 60).to_i %> min ago</p>
+      <p><%= comment.time_since_creation %></p>
     </div>
   </div>
   <div class="comment-content">
