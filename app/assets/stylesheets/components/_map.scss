@@ -1,6 +1,6 @@
 // MEDIUM DEVICES
 @media (min-width:1200px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-  #map {
+  #map_search {
     margin-top: 3vh;
     margin-bottom: 2vh;
     flex: 0 0 40%;
@@ -12,7 +12,7 @@
 }
 
 @media (max-width:1200px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-  #map {
+  #map_search {
     margin-top: 3vh;
     margin-bottom: 2vh;
     width: 100%;
