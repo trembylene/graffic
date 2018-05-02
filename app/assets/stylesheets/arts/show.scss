@@ -46,6 +46,7 @@ h5 {
   margin-top: 3vh;
   margin-bottom: 2vh;
   margin-left: 20px;
+  margin-right: 20px
 }
 
 #tag {
@@ -56,15 +57,15 @@ h5 {
   margin-top: 3vh;
   margin-bottom: 2vh;
   padding-left: 30px;
+  width: 90%;
   #new_comment {
     margin-left:15px;
-    width: 100%;
   }
 }
 
 
 .comment-container {
-margin: 5px 0px 5px 0px;
+  margin: 5px 0px 5px 0px;
 }
 
 .user-alias p {
@@ -72,8 +73,8 @@ margin: 5px 0px 5px 0px;
   color: #616668;
 }
 
-.comments {
-  max-height: 600px;
+#comments {
+  margin: 5px 5px 5px 5px;
 }
 
 .comment-content {
@@ -81,7 +82,7 @@ margin: 5px 0px 5px 0px;
   padding: 8px 10px 0.1px 10px;
   background-color: white;
   border-radius: 4px;
-  width: 100%;
+  width: 96%;
 }
 
 .comment-user {
