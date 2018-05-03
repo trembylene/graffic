@@ -4,8 +4,7 @@
       <h2 class="card-title"><%= truncate(art.title, length: 40) %></h2>
     </div>
     <div class="card-body">
-      <div class="card-photo" style="background-image: url(<%= art.photo %>);">
-      </div>
+      <%= card_photo(art.photo) %>
     </div>
     <div class="card-footer">
       <div class="avatars">
