@@ -1,7 +1,6 @@
 <div class="comment-container" style="opacity: 0.0;">
   <div class="comment-user">
-    <div class="avatar avatar-card-artist" style="background-image: url(<%= comment.user.avatar %>);">
-    </div>
+    <%= user_avatar(comment.user.avatar) %>
     <p><%= comment.user.alias %></p>
     <div class="timestamp">
       <p><%= comment.time_since_creation %></p>

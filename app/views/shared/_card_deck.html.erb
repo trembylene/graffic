@@ -15,7 +15,7 @@
           </div>
           <% if art.artist %>
             <% if art.artist.avatar? %>
-              <div class="avatar avatar-card-artist" style="background-image: url(<%= art.artist.avatar %>);"></div>
+              <%= user_avatar(art.artist.avatar) %>
             <% else %>
               <div class="avatar avatar-card-artist no-avatar" style="background-image: url('//res.cloudinary.com/trembylene/image/upload/v1525074875/kmixjiw4vmgqwt0hnpsj.png');">
               </div>

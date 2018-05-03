@@ -1,14 +1,15 @@
 import GMaps from 'gmaps/gmaps.js';
 
 function mouseOverMarker(markerId) {
-  console.log(markerId);
-  document.getElementById(markerId).classList.toggle("highlight");
+  const elem = document.getElementById(markerId);
+  if (elem)
+    elem.classList.toggle("highlight");
 }
 
 function addMarkersToMap(markers, map) {
   markers.forEach(function(marker) {
     map.addMarker(
-      Object.assign(marker, {map: map,
+      Object.assign(marker, {
         mouseover: function() {
           mouseOverMarker(marker.id);
         },
