@@ -8,7 +8,7 @@
       <span class="input-group-addon" id="basic-addon2"><i class="fa fa-key" aria-hidden="true"></i></span>
       <%= f.input :password, required: true, placeholder: 'Password', label: false, class: "form-control", input_html: {id: 'new_session_password'} %>
     </div>
-    <%= f.input :remember_me, inline_label: 'Yes, remember me', as: :boolean if devise_mapping.rememberable? %>
+    <%= f.input :remember_me, inline_label: 'Yes, remember me', as: :boolean, input_html: {id: 'new_remember'} if devise_mapping.rememberable? %>
   </div>
 
   <div class="form-actions">
