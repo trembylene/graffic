@@ -83,7 +83,7 @@ art = Art.new(
 art.save!
 
 art = Art.new(
-  photo: open("http://res.cloudinary.com/trembylene/image/upload/v1525314494/amxgbwhd9b5rvpgeavms.jpg"),
+  photo: open("//res.cloudinary.com/trembylene/image/upload/v1525314494/amxgbwhd9b5rvpgeavms.jpg"),
   location: "120 King Street, Melbourne",
   latitude: "-37.817409",
   longitude: "144.956309",
@@ -100,7 +100,7 @@ art.liked_by User.find(3)
 art.liked_by User.find(4)
 
 art = Art.new(
-  photo: open("http://res.cloudinary.com/trembylene/image/upload/v1525314663/y2ouvjqeeirzck7nusiq.jpg"),
+  photo: open("//res.cloudinary.com/trembylene/image/upload/v1525314663/y2ouvjqeeirzck7nusiq.jpg"),
   location: "34-18 Equitable Pl, Melbourne VIC 3000",
   latitude: "-37.815443",
   longitude: "144.963190",
@@ -117,7 +117,7 @@ art.liked_by User.find(3)
 art.liked_by User.find(4)
 
 art = Art.new(
-  photo: open("http://res.cloudinary.com/trembylene/image/upload/v1525314760/mcd1i4gz114roavab1n7.jpg"),
+  photo: open("//res.cloudinary.com/trembylene/image/upload/v1525314760/mcd1i4gz114roavab1n7.jpg"),
   location: "1-11 James St, Fitzroy VIC 3065",
   latitude: "-37.804052",
   longitude: "144.977102",
@@ -134,7 +134,7 @@ art.liked_by User.find(3)
 art.liked_by User.find(4)
 
 art = Art.new(
-  photo: open("http://res.cloudinary.com/trembylene/image/upload/v1525314786/cooah0gqpo4ffasy9ecn.jpg"),
+  photo: open("//res.cloudinary.com/trembylene/image/upload/v1525314786/cooah0gqpo4ffasy9ecn.jpg"),
   location: "37-41 Grattan Pl, Carlton VIC 3053",
   latitude: "-37.801472",
   longitude: "144.965722",
@@ -151,7 +151,7 @@ art.liked_by User.find(3)
 art.liked_by User.find(4)
 
 art = Art.new(
-  photo: open("http://res.cloudinary.com/trembylene/image/upload/v1525314814/o6vtacxmj72zapnoi5hz.jpg"),
+  photo: open("//res.cloudinary.com/trembylene/image/upload/v1525314814/o6vtacxmj72zapnoi5hz.jpg"),
   location: "Union Ln, Melbourne VIC 3000",
   latitude: "-37.814289",
   longitude: "144.964734",
@@ -168,7 +168,7 @@ art.liked_by User.find(3)
 art.liked_by User.find(4)
 
 art = Art.new(
-  photo: open("http://res.cloudinary.com/trembylene/image/upload/v1525314846/dijsbrnagqbodaivlffy.jpg"),
+  photo: open("//res.cloudinary.com/trembylene/image/upload/v1525314846/dijsbrnagqbodaivlffy.jpg"),
   location: "Caledonian Ln, Melbourne VIC 3000",
   latitude: "-37.812183",
   longitude: "144.964525",
@@ -185,7 +185,7 @@ art.liked_by User.find(3)
 art.liked_by User.find(4)
 
 art = Art.new(
-  photo: open("http://res.cloudinary.com/trembylene/image/upload/v1525314882/y1sbxt1fu6soptgqjnpz.jpg"),
+  photo: open("//res.cloudinary.com/trembylene/image/upload/v1525314882/y1sbxt1fu6soptgqjnpz.jpg"),
   location: "22 Singleton St, Collingwood VIC 3066",
   latitude: "-37.804193",
   longitude: "144.987690",
@@ -202,7 +202,7 @@ art.liked_by User.find(3)
 art.liked_by User.find(4)
 
 art = Art.new(
-  photo: open("http://res.cloudinary.com/trembylene/image/upload/v1525314923/viaeclsmjhhwl7pnnacb.jpg"),
+  photo: open("//res.cloudinary.com/trembylene/image/upload/v1525314923/viaeclsmjhhwl7pnnacb.jpg"),
   location: "69-1 Fawkner St, St Kilda VIC 3182",
   latitude: "-37.865094",
   longitude: "144.980262",
@@ -219,7 +219,7 @@ art.liked_by User.find(3)
 art.liked_by User.find(4)
 
 art = Art.new(
-  photo: open("http://res.cloudinary.com/trembylene/image/upload/v1525314951/frjl5kl7iy8sddqozzf6.jpg"),
+  photo: open("//res.cloudinary.com/trembylene/image/upload/v1525314951/frjl5kl7iy8sddqozzf6.jpg"),
   location: "91 Nimmo St, Middle Park VIC 3206",
   latitude: "-37.852144",
   longitude: "144.960605",
@@ -236,7 +236,7 @@ art.liked_by User.find(3)
 art.liked_by User.find(4)
 
 art = Art.new(
-  photo: open("http://res.cloudinary.com/trembylene/image/upload/v1525314982/dpupxgomcvcsxpi21awj.jpg"),
+  photo: open("//res.cloudinary.com/trembylene/image/upload/v1525314982/dpupxgomcvcsxpi21awj.jpg"),
   location: "55 Dando St, Cremorne VIC 3121",
   latitude: "-37.823892",
   longitude: "144.995319",
@@ -252,7 +252,7 @@ art.liked_by User.find(3)
 art.liked_by User.find(4)
 
 # art = Art.new(
-#   photo: open("http://res.cloudinary.com/trembylene/image/upload/v1525315027/drpwt5njmy0wdtdb9j39.jpg"),
+#   photo: open("//res.cloudinary.com/trembylene/image/upload/v1525315027/drpwt5njmy0wdtdb9j39.jpg"),
 #   location: "",
 #   latitude: "",
 #   longitude: "",
@@ -268,7 +268,7 @@ art.liked_by User.find(4)
 # art.liked_by User.find(4)
 
 # art = Art.new(
-#   photo: open("http://res.cloudinary.com/trembylene/image/upload/v1525315054/pyvo3b3vt7qhwpcfh6pk.jpg"),
+#   photo: open("//res.cloudinary.com/trembylene/image/upload/v1525315054/pyvo3b3vt7qhwpcfh6pk.jpg"),
 #   location: "",
 #   latitude: "",
 #   longitude: "",
@@ -284,7 +284,7 @@ art.liked_by User.find(4)
 # art.liked_by User.find(4)
 
 # art = Art.new(
-#   photo: open("http://res.cloudinary.com/trembylene/image/upload/v1525315085/cyegeyar07qs3bqqimai.jpg"),
+#   photo: open("//res.cloudinary.com/trembylene/image/upload/v1525315085/cyegeyar07qs3bqqimai.jpg"),
 #   location: "",
 #   latitude: "",
 #   longitude: "",
@@ -300,7 +300,7 @@ art.liked_by User.find(4)
 # art.liked_by User.find(4)
 
 # art = Art.new(
-#   photo: open("http://res.cloudinary.com/trembylene/image/upload/v1525315118/bqoqnmnwrd4xsbh9flks.jpg"),
+#   photo: open("//res.cloudinary.com/trembylene/image/upload/v1525315118/bqoqnmnwrd4xsbh9flks.jpg"),
 #   location: "",
 #   latitude: "",
 #   longitude: "",
@@ -316,7 +316,7 @@ art.liked_by User.find(4)
 # art.liked_by User.find(4)
 
 # art = Art.new(
-#   photo: open("http://res.cloudinary.com/trembylene/image/upload/v1525315154/hdygigwzlvcmu0en6b6a.jpg"),
+#   photo: open("//res.cloudinary.com/trembylene/image/upload/v1525315154/hdygigwzlvcmu0en6b6a.jpg"),
 #   location: "",
 #   latitude: "",
 #   longitude: "",
@@ -332,7 +332,7 @@ art.liked_by User.find(4)
 # art.liked_by User.find(4)
 
 # art = Art.new(
-#   photo: open("http://res.cloudinary.com/trembylene/image/upload/v1525315182/swc3uqeiuwzgg2nnjnwf.jpg"),
+#   photo: open("//res.cloudinary.com/trembylene/image/upload/v1525315182/swc3uqeiuwzgg2nnjnwf.jpg"),
 #   location: "",
 #   latitude: "",
 #   longitude: "",
@@ -348,7 +348,7 @@ art.liked_by User.find(4)
 # art.liked_by User.find(4)
 
 # art = Art.new(
-#   photo: open("http://res.cloudinary.com/trembylene/image/upload/v1525315214/se85lybl64oxudzhjgyz.jpg"),
+#   photo: open("//res.cloudinary.com/trembylene/image/upload/v1525315214/se85lybl64oxudzhjgyz.jpg"),
 #   location: "",
 #   latitude: "",
 #   longitude: "",
@@ -363,23 +363,7 @@ art.liked_by User.find(4)
 # art.liked_by User.find(4)
 
 # art = Art.new(
-#   photo: open("http://res.cloudinary.com/trembylene/image/upload/v1525315241/qttzpu3blmkqnnye0uqb.jpg"),
-#   location: "",
-#   latitude: "",
-#   longitude: "",
-#   title: Faker::Book.title,
-#   description: Faker::Lovecraft.sentences,
-#   tags: Faker::Lovecraft.words,
-#   user_id: 1,
-#   artist_id: my_artist.sample,
-#   )
-# art.save!
-# art.liked_by User.find(1)
-# art.liked_by User.find(3)
-# art.liked_by User.find(4)
-
-# art = Art.new(
-#   photo: open("http://res.cloudinary.com/trembylene/image/upload/v1525315276/jpdslfugvgnbg7eahevr.jpg"),
+#   photo: open("//res.cloudinary.com/trembylene/image/upload/v1525315241/qttzpu3blmkqnnye0uqb.jpg"),
 #   location: "",
 #   latitude: "",
 #   longitude: "",
@@ -395,7 +379,23 @@ art.liked_by User.find(4)
 # art.liked_by User.find(4)
 
 # art = Art.new(
-#   photo: open("http://res.cloudinary.com/trembylene/image/upload/v1525315307/fxwcu2wfspeekhd5jvqt.jpg"),
+#   photo: open("//res.cloudinary.com/trembylene/image/upload/v1525315276/jpdslfugvgnbg7eahevr.jpg"),
+#   location: "",
+#   latitude: "",
+#   longitude: "",
+#   title: Faker::Book.title,
+#   description: Faker::Lovecraft.sentences,
+#   tags: Faker::Lovecraft.words,
+#   user_id: 1,
+#   artist_id: my_artist.sample,
+#   )
+# art.save!
+# art.liked_by User.find(1)
+# art.liked_by User.find(3)
+# art.liked_by User.find(4)
+
+# art = Art.new(
+#   photo: open("//res.cloudinary.com/trembylene/image/upload/v1525315307/fxwcu2wfspeekhd5jvqt.jpg"),
 #   location: "",
 #   latitude: "",
 #   longitude: "",

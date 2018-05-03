@@ -33,24 +33,24 @@
           <% if current_user.avatar? %>
             <%= cl_image_tag current_user.avatar, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
           <% else %>
-            <%= cl_image_tag("http://res.cloudinary.com/trembylene/image/upload/v1525074875/kmixjiw4vmgqwt0hnpsj.png", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown") %>
+            <%= cl_image_tag("//res.cloudinary.com/trembylene/image/upload/v1525074875/kmixjiw4vmgqwt0hnpsj.png", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown") %>
           <% end %>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
               <%= link_to uploaded_arts_path do %>
-                <%= image_tag("http://res.cloudinary.com/trembylene/image/upload/v1524810715/d4xdmyxkf2mvkswury1i.svg", class: "custom_icon") %>  <%= t(".uploaded_art", default: "Art I've Uploaded") %>
+                <%= image_tag("//res.cloudinary.com/trembylene/image/upload/v1524810715/d4xdmyxkf2mvkswury1i.svg", class: "custom_icon") %>  <%= t(".uploaded_art", default: "Art I've Uploaded") %>
               <% end %>
             </li>
             <% if current_user.street_artist? %>
               <li>
                 <%= link_to mine_arts_path do %>
-                  <%= image_tag("http://res.cloudinary.com/trembylene/image/upload/v1524810657/xubgjkuhkl1mcsmi2epr.svg", class: "custom_icon") %>  <%= t(".my_street-art", default: "My Street Art") %>
+                  <%= image_tag("//res.cloudinary.com/trembylene/image/upload/v1524810657/xubgjkuhkl1mcsmi2epr.svg", class: "custom_icon") %>  <%= t(".my_street-art", default: "My Street Art") %>
                 <% end %>
               </li>
             <% end %>
             <li>
               <%= link_to hearted_arts_path do %>
-                <%= image_tag("http://res.cloudinary.com/trembylene/image/upload/v1524809420/kuzbuvs5nu74mrfszbet.svg", class: "custom_icon") %>  <%= t(".my_likes", default: "Hearted Art") %>
+                <%= image_tag("//res.cloudinary.com/trembylene/image/upload/v1524809420/kuzbuvs5nu74mrfszbet.svg", class: "custom_icon") %>  <%= t(".my_likes", default: "Hearted Art") %>
               <% end %>
             </li>
             <li>
@@ -87,34 +87,34 @@
         </li>
         <li>
           <%= link_to arts_path do %>
-            <%= image_tag("http://res.cloudinary.com/trembylene/image/upload/v1525314994/duuqcnydec3nl9wip5wh.png", class: "custom_icon") %> <%= t(".explore_art", default: "Explore Street Art") %>
+            <%= image_tag("//res.cloudinary.com/trembylene/image/upload/v1525314994/duuqcnydec3nl9wip5wh.png", class: "custom_icon") %> <%= t(".explore_art", default: "Explore Street Art") %>
           <% end %>
         </li>
         <li>
           <%= link_to user_path(current_user) do %>
-            <%= image_tag("http://res.cloudinary.com/trembylene/image/upload/v1525315064/rrh4vdgp08cau47rj5qs.svg", class: "custom_icon") %> <%= t(".my_profile", default: "My Profile") %>
+            <%= image_tag("//res.cloudinary.com/trembylene/image/upload/v1525315064/rrh4vdgp08cau47rj5qs.svg", class: "custom_icon") %> <%= t(".my_profile", default: "My Profile") %>
           <% end %>
         </li>
         <li>
           <%= link_to new_art_path do %>
-            <%= image_tag("http://res.cloudinary.com/trembylene/image/upload/v1525315224/xsjxm4cejduc87m1bdnv.ico", class: "custom_icon") %> <%= t(".upload_art", default: "Upload Street Art") %>
+            <%= image_tag("//res.cloudinary.com/trembylene/image/upload/v1525315224/xsjxm4cejduc87m1bdnv.ico", class: "custom_icon") %> <%= t(".upload_art", default: "Upload Street Art") %>
           <% end %>
         </li>
         <li>
           <%= link_to uploaded_arts_path do %>
-            <%= image_tag("http://res.cloudinary.com/trembylene/image/upload/v1524810715/d4xdmyxkf2mvkswury1i.svg", class: "custom_icon") %>  <%= t(".uploaded_art", default: "Art I've Uploaded") %>
+            <%= image_tag("//res.cloudinary.com/trembylene/image/upload/v1524810715/d4xdmyxkf2mvkswury1i.svg", class: "custom_icon") %>  <%= t(".uploaded_art", default: "Art I've Uploaded") %>
           <% end %>
         </li>
         <% if current_user.street_artist? %>
           <li>
             <%= link_to mine_arts_path do %>
-              <%= image_tag("http://res.cloudinary.com/trembylene/image/upload/v1524810657/xubgjkuhkl1mcsmi2epr.svg", class: "custom_icon") %>  <%= t(".my_street-art", default: "My Street Art") %>
+              <%= image_tag("//res.cloudinary.com/trembylene/image/upload/v1524810657/xubgjkuhkl1mcsmi2epr.svg", class: "custom_icon") %>  <%= t(".my_street-art", default: "My Street Art") %>
             <% end %>
           </li>
         <% end %>
         <li>
           <%= link_to hearted_arts_path do %>
-            <%= image_tag("http://res.cloudinary.com/trembylene/image/upload/v1524809420/kuzbuvs5nu74mrfszbet.svg", class: "custom_icon") %>  <%= t(".my_likes", default: "Hearted Art") %>
+            <%= image_tag("//res.cloudinary.com/trembylene/image/upload/v1524809420/kuzbuvs5nu74mrfszbet.svg", class: "custom_icon") %>  <%= t(".my_likes", default: "Hearted Art") %>
           <% end %>
         </li>
         <li>

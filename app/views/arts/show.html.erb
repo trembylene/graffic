@@ -30,13 +30,13 @@
             <% if @art.artist.avatar? %>
               <div class="avatar-large avatar-profile" style="background-image: url(<%= @art.artist.avatar %>);">
             <% else %>
-              <div class="avatar-large avatar-profile no-avatar" style="background-image: url('http://res.cloudinary.com/trembylene/image/upload/v1525074875/kmixjiw4vmgqwt0hnpsj.png');">
+              <div class="avatar-large avatar-profile no-avatar" style="background-image: url('//res.cloudinary.com/trembylene/image/upload/v1525074875/kmixjiw4vmgqwt0hnpsj.png');">
             <% end %>
                 <%= link_to "", user_path(@art.artist), class: "card-link"  %>
                 <div class="street-artist-badge">A</div>
               </div>
           <% else %>
-            <div class="avatar-large avatar-profile no-artist" style="background-image: url('http://res.cloudinary.com/trembylene/image/upload/v1525075406/rah5d3yzvx7jbkzakhrv.jpg')">
+            <div class="avatar-large avatar-profile no-artist" style="background-image: url('//res.cloudinary.com/trembylene/image/upload/v1525075406/rah5d3yzvx7jbkzakhrv.jpg')">
             </div>
           <% end %>
         </div>
