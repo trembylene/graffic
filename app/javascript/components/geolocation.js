@@ -12,7 +12,7 @@ function geolocation() {
     document.getElementById("locator").remove();
     document.getElementById("art_latitude").setAttribute("value", crd.latitude);
     document.getElementById("art_longitude").setAttribute("value", crd.longitude);
-    fetch(`http://maps.googleapis.com/maps/api/geocode/json?latlng=${crd.latitude},${crd.longitude}&sensor=true`)
+    fetch(window.location.protocol + `//maps.googleapis.com/maps/api/geocode/json?latlng=${crd.latitude},${crd.longitude}&sensor=true`)
       .then(function(response) {
           return response.json();
         })
