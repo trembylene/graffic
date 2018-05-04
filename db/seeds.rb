@@ -4,7 +4,7 @@ Art.destroy_all
 
 puts "Creating fake art..."
 
-my_artist = [1, 2, 4, 6]
+my_artist = [1, 5, 4, 6]
 users = [1, 2, 3, 4, 5, 6, 7, 8]
 
 art = Art.new(
@@ -98,6 +98,8 @@ art.liked_by User.find(1)
 art.liked_by User.find(2)
 art.liked_by User.find(3)
 art.liked_by User.find(4)
+art.liked_by User.find(6)
+art.liked_by User.find(5)
 
 art = Art.new(
   photo: open("//res.cloudinary.com/trembylene/image/upload/v1525314663/y2ouvjqeeirzck7nusiq.jpg"),
@@ -115,6 +117,10 @@ art.liked_by User.find(1)
 art.liked_by User.find(2)
 art.liked_by User.find(3)
 art.liked_by User.find(4)
+art.liked_by User.find(5)
+art.liked_by User.find(6)
+art.liked_by User.find(7)
+art.liked_by User.find(8)
 
 art = Art.new(
   photo: open("//res.cloudinary.com/trembylene/image/upload/v1525314760/mcd1i4gz114roavab1n7.jpg"),
@@ -149,13 +155,14 @@ art.liked_by User.find(1)
 art.liked_by User.find(2)
 art.liked_by User.find(3)
 art.liked_by User.find(4)
+art.liked_by User.find(8)
 
 art = Art.new(
   photo: open("//res.cloudinary.com/trembylene/image/upload/v1525314814/o6vtacxmj72zapnoi5hz.jpg"),
   location: "Union Ln, Melbourne VIC 3000",
   latitude: "-37.814289",
   longitude: "144.964734",
-  title: "Girl on Blue",
+  title: "Girl in Blue",
   description: "This work is arestrained, conceptual voice emitted by speakers consisting of incendiary writing of punk musicians which is reminiscent of landscape and the body.",
   tags: "eBay-sourced figurines felt deck chair face blue pop-culture",
   user_id: users.sample,
@@ -165,7 +172,6 @@ art.save!
 art.liked_by User.find(1)
 art.liked_by User.find(2)
 art.liked_by User.find(3)
-art.liked_by User.find(4)
 
 art = Art.new(
   photo: open("//res.cloudinary.com/trembylene/image/upload/v1525314846/dijsbrnagqbodaivlffy.jpg"),
@@ -183,6 +189,8 @@ art.liked_by User.find(1)
 art.liked_by User.find(2)
 art.liked_by User.find(3)
 art.liked_by User.find(4)
+art.liked_by User.find(7)
+art.liked_by User.find(8)
 
 art = Art.new(
   photo: open("//res.cloudinary.com/trembylene/image/upload/v1525314882/y1sbxt1fu6soptgqjnpz.jpg"),
