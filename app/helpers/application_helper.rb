@@ -16,6 +16,14 @@ module ApplicationHelper
   end
 
   def image_div(klass, object)
-    content_tag :div, nil, class: klass, style: "background-image: url(#{url_with_protocol(object)});"
+    options = {
+      class: klass
+    }
+
+    options[:style] = "background-image: url(#{url_with_protocol(object)});" if object.url
+
+    content_tag :div, options do
+      yield if block_given?
+    end
   end
 end
