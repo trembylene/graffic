@@ -2,9 +2,8 @@
 <% content_for :meta_description, @art.description %>
 <% content_for :meta_image, cl_image_path(@art.photo) %>
 <div class="text-center"></div>
-<div class="banner" style="background-image: url('<%= @art.photo %>');">
 
-</div>
+<%= image_div('banner', @art.photo) %>
 
 <div class="container">
   <div class="row">
@@ -28,7 +27,7 @@
           </ul>
           <% if @art.artist %>
             <% if @art.artist.avatar? %>
-              <div class="avatar-large avatar-profile" style="background-image: url(<%= @art.artist.avatar %>);">
+              <%= image_div('avatar-large avatar-profile', @art.artist.avatar) %>
             <% else %>
               <div class="avatar-large avatar-profile no-avatar" style="background-image: url('//res.cloudinary.com/trembylene/image/upload/v1525074875/kmixjiw4vmgqwt0hnpsj.png');">
             <% end %>
